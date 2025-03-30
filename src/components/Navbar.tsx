@@ -1,24 +1,44 @@
-"use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
+import useTheme from "@/hooks/useTheme";
+import { navbarContent } from "../content/navbar";
 
-import { navbarContent } from "@/content/navbar";
-import type { NavbarProps } from "@/types/theme";
-import Image from "next/image";
-import { ASSET_IMAGES } from "@/content/images";
+const Navbar: React.FC = () => {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-const Navbar: React.FC<NavbarProps> = ({ toggleTheme }) => {
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  // Use dark mode logo if theme is "dark"
+
+  const logoSrc =
+    theme === "dark" ? navbarContent.logoSrc : navbarContent.darkLogoSrc;
+
   return (
-    <nav className="p-4 flex justify-between items-center bg-white dark:bg-black-10">
-      <p className="text-lg text-black dark:text-white">
-        {navbarContent.title}
-      </p>
-      <Image src={ASSET_IMAGES.DUMMY_IMAGE} alt="" width={80} height={80} />
-      <button
-        onClick={toggleTheme}
-        className="px-4 py-2 rounded bg-white text-black-20 dark:bg-black-10 dark:text-white"
-      >
-        {navbarContent.toggleButton}
-      </button>
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 w-1/2 bg-[rgba(239,239,239,0.75)] dark:bg-[rgba(28,28,26,0.75)] backdrop-blur-md backdrop-saturate-150 text-white px-10 py-4 rounded-full flex items-center justify-between z-50">
+      {/* Logo Section */}
+      <div className="flex items-center space-x-2">
+        <img
+          src={logoSrc}
+          alt={`${navbarContent.title} Logo`}
+          className="h-6"
+        />
+        <span className="text-2xl font-medium justify-center dark:text-white text-black-20 items-center">
+          {navbarContent.title}
+        </span>
+      </div>
+
+      {/* Navigation Links */}
+      <div className="flex space-x-8 dark:text-gray text-black-10 text-lg">
+        {navbarContent.links.map((link, idx) => (
+          <a key={idx} href={link.href} className="hover:text-white transition">
+            {link.label}
+          </a>
+        ))}
+      </div>
     </nav>
   );
 };

@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Walsheim';
+    src: url('/fonts/GT-Walsheim-Pro-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .font-walsheim {
+    font-family: 'Walsheim', sans-serif;
+  }

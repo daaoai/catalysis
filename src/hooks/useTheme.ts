@@ -3,20 +3,26 @@ import { ThemeEnum, type Theme } from "@/types/theme";
 import { useState, useEffect } from "react";
 
 const useTheme = () => {
-  const savedTheme =
-    typeof window !== "undefined"
-      ? (localStorage.getItem("theme") as Theme)
-      : null;
+  const getSystemTheme = (): Theme => {
+    if (typeof window !== "undefined" && window.matchMedia) {
+      return window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? ThemeEnum.Dark
+        : ThemeEnum.Light;
+    }
+    return ThemeEnum.Light;
+  };
 
-  const [theme, setTheme] = useState<Theme>(savedTheme || ThemeEnum.Light);
+  const [theme, setTheme] = useState<Theme>(() => {
+    if (typeof window === "undefined") return ThemeEnum.Light;
+    const saved = localStorage.getItem("theme") as Theme | null;
+    return saved ?? getSystemTheme();
+  });
 
   useEffect(() => {
     document.body.classList.remove(ThemeEnum.Light, ThemeEnum.Dark);
     document.body.classList.add(theme);
 
-    if (typeof window !== "undefined") {
-      localStorage.setItem("theme", theme);
-    }
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   const toggleTheme = () => {
