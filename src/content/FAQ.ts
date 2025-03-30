@@ -3,9 +3,9 @@ export interface FAQ {
   answer: string;
 }
 
-export const users: string[] = ["User 1", "User 2", "User 3"];
+export const userContent: string[] = ["User 1", "User 2", "User 3"];
 
-export const faqs: FAQ[] = [
+export const faqContent: FAQ[] = [
   {
     question: "How easy is it to build a Network using Catalysis?",
     answer:
@@ -26,7 +26,7 @@ export const faqs: FAQ[] = [
   },
 ];
 
-export const faqSectionContent = {
+export const faqPageContent = {
   heading: "FAQs",
   description:
     "Lorem ultriceipsum dolor sit amet consectetur. Mauris cursus sit nulla faucibus urna. Molestie elit magna rhoncus posuere amet etiam duis pharetra. Nascetur porttitor tellusultrices lacinia nunc vestibulum ultricies ante elementum quam.",

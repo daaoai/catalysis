@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { features, featurePageContent } from "@/content/features";
+import { features, featurePageContent } from "@/content/Features";
 import useTheme from "@/hooks/useTheme";
 
 const FeaturesSection: React.FC = () => {
@@ -46,7 +46,7 @@ const FeaturesSection: React.FC = () => {
             />
             <div className="p-4">
               <h3 className="text-lg font-semibold mb-3">{feature.title}</h3>
-              <p className="text-sm text-black-10 dark:text-[#C3C3C3]">
+              <p className="text-sm text-black-10 dark:text-featuresAnswerDark">
                 {feature.description}
               </p>
             </div>

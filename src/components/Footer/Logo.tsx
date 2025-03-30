@@ -1,6 +1,6 @@
 import React from "react";
 import useTheme from "@/hooks/useTheme";
-import { LOGOS } from "../../content/images";
+import { LOGOS } from "../../content/Images";
 
 const Logo = () => {
   const { theme } = useTheme();

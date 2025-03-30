@@ -1,6 +1,6 @@
 import React from "react";
 import useTheme from "@/hooks/useTheme";
-import { WATERMARKS } from "../../content/images";
+import { WATERMARKS } from "../../content/Images";
 
 const Watermark = () => {
   const { theme } = useTheme();

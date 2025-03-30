@@ -23,7 +23,7 @@ const BlogsSection: React.FC = () => {
         {blogs.map((blog, idx) => (
           <div
             key={idx}
-            className="rounded overflow-hidden dark:bg-[#2E2E2D] bg-[#f0f9ff]"
+            className="rounded overflow-hidden dark:bg-blogCardDark bg-lightCard1"
           >
             <div className="w-full aspect-[3/2] bg-white">
               <Image
@@ -35,7 +35,7 @@ const BlogsSection: React.FC = () => {
               />
             </div>
             <div className="p-4">
-              <h3 className="text-[28px] dark:text-white text-[#095993]  mb-4 line-clamp-2">
+              <h3 className="text-[28px] dark:text-white text-blogTitle mb-4 line-clamp-2">
                 {blog.title}
               </h3>
               <p className="dark:text-gray text-[16px] line-clamp-3">

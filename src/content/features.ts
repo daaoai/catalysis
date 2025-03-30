@@ -1,4 +1,4 @@
-import { FEATURE_IMAGES, FEATURE_IMAGES_DARK } from "./images";
+import { FEATURE_IMAGES, FEATURE_IMAGES_DARK } from "./Images";
 
 export interface Feature {
   title: string;

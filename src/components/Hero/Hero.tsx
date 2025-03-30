@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import useTheme from "@/hooks/useTheme";
-import { heroContent } from "@/content/hero";
-import { BG_IMAGES, BG_IMAGES_DARK } from "@/content/images";
+import { heroContent } from "@/content/Hero";
+import { BG_IMAGES, BG_IMAGES_DARK } from "@/content/Images";
 import Partners from "./Partners";
 
 const HeroSection: React.FC = () => {
@@ -29,7 +29,7 @@ const HeroSection: React.FC = () => {
             <h1 className="text-5xl md:text-6xl leading-tight">
               {heroContent.title[0]} <br /> {heroContent.title[1]}
             </h1>
-            <p className="mt-6 text-base md:text-lg dark:text-gray text-[#383737] max-w-xl text-right">
+            <p className="mt-6 text-base md:text-lg dark:text-gray text-black-10 max-w-xl text-right">
               {heroContent.subtitle}
             </p>
             <button className="mt-10 px-6 mx-6 py-3 bg-black text-white dark:bg-white dark:text-black rounded-full font-medium hover:bg-gray-200 transition">

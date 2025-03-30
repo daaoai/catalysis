@@ -1,4 +1,4 @@
-import { STAT_IMAGES, STAT_IMAGES_DARK } from "./images";
+import { STAT_IMAGES, STAT_IMAGES_DARK } from "./Images";
 
 export interface StatCard {
   title: string;
@@ -22,8 +22,8 @@ export const statCards: StatCard[] = [
       dark: STAT_IMAGES_DARK.CARD1,
     },
     textColor: {
-      light: "text-[#C87E10]",
-      dark: "text-[#F4AB3E]", // Change if you want a different color in dark mode
+      light: "text-statCard1Light",
+      dark: "text-statCard1Dark",
     },
   },
   {
@@ -34,8 +34,8 @@ export const statCards: StatCard[] = [
       dark: STAT_IMAGES_DARK.CARD2,
     },
     textColor: {
-      light: "text-[#B417D7]",
-      dark: "text-[#B417D7]",
+      light: "text-statCard2",
+      dark: "text-statCard2",
     },
   },
   {
@@ -46,8 +46,8 @@ export const statCards: StatCard[] = [
       dark: STAT_IMAGES_DARK.CARD3,
     },
     textColor: {
-      light: "text-[#085A95]",
-      dark: "text-[#58B2F4]",
+      light: "text-statCard3Light",
+      dark: "text-statCard3Dark",
     },
   },
 ];

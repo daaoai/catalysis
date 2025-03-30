@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import useTheme from "@/hooks/useTheme";
-import { navbarContent } from "../content/navbar";
+import { navbarContent } from "../content/Navbar";
 
 const Navbar: React.FC = () => {
   const { theme } = useTheme();

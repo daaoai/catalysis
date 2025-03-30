@@ -2,7 +2,7 @@ import React from "react";
 import { FooterContent } from "../../content/Footer";
 import Link from "next/link";
 import useTheme from "@/hooks/useTheme";
-import { SOCIAL_IMAGES, SOCIAL_IMAGES_DARK } from "../../content/images";
+import { SOCIAL_IMAGES, SOCIAL_IMAGES_DARK } from "../../content/Images";
 import Watermark from "./Watermark";
 import Logo from "./Logo";
 

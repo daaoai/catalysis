@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import useTheme from "@/hooks/useTheme";
 import { roadmapSection, roadmapItems } from "@/content/Roadmap";
 import { ThemeEnum } from "@/types/theme";
-import { BG_IMAGES, BG_IMAGES_DARK } from "@/content/images";
+import { BG_IMAGES, BG_IMAGES_DARK } from "@/content/Images";
 
 const Roadmap: React.FC = () => {
   const { theme } = useTheme();
@@ -32,15 +32,15 @@ const Roadmap: React.FC = () => {
           {roadmapItems.map((item, idx) => (
             <div
               key={idx}
-              className="flex items-center w-full max-w-[574px] p-4 rounded-xl bg-[#ffddab] dark:bg-[#3B2607] backdrop-blur-xl"
+              className="flex items-center w-full max-w-[574px] p-4 rounded-xl bg-roadmapItemLight dark:bg-roadmapItemDark backdrop-blur-xl"
               style={{ marginLeft: `${idx * 18}rem` }}
             >
-              <div className="dark:bg-[#F4AB3E] dark:text-[#3B2607] text-[#F4AB3E] bg-[#3B2607] w-[100px] h-[106px] font-bold text-center px-4 py-2 rounded mr-6 font-walsheim">
+              <div className="w-[100px] h-[106px] font-bold text-center px-4 py-2 rounded mr-6 font-walsheim bg-roadmapBoxLight text-roadmapBoxLightText dark:bg-roadmapBoxDark dark:text-roadmapBoxDarkText">
                 <div className="text-[40px] leading-none">{item.quarter}</div>
                 <div className="text-[48px] leading-none">{item.year}</div>
               </div>
               <div>
-                <h3 className="text-2xl dark:text-white text-[#3B2607] font-walsheim font-semibold mb-2">
+                <h3 className="text-2xl dark:text-white text-roadmapBoxLight font-walsheim font-semibold mb-2">
                   {item.title}
                 </h3>
                 <p className="text-sm dark:text-gray text-black-10 font-walsheim">

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import useTheme from "@/hooks/useTheme";
 import { developerHubContent } from "@/content/DeveloperHub";
-import { BG_IMAGES, BG_IMAGES_DARK } from "@/content/images";
+import { BG_IMAGES, BG_IMAGES_DARK } from "@/content/Images";
 
 const DeveloperHub: React.FC = () => {
   const { theme } = useTheme();

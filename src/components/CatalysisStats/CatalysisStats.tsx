@@ -33,7 +33,7 @@ const CatalystStats: React.FC = () => {
               className="w-full h-auto rounded-lg"
             />
             <div className="absolute top-20 lg:top-28 left-0 w-full h-full p-6 z-10 flex flex-col rounded-lg gap-y-3">
-              <p className="text-lg dark:text-[#CCC6C6] text-black-10 uppercase py-2 px-3">
+              <p className="text-lg dark:text-white-50 text-black-10 uppercase py-2 px-3">
                 {firstCard.title}
               </p>
               <h3
@@ -58,7 +58,7 @@ const CatalystStats: React.FC = () => {
               className="w-full h-auto rounded-lg"
             />
             <div className="absolute top-0 left-0 w-full h-full p-6 z-10 flex flex-col rounded-lg gap-y-3">
-              <p className="text-lg dark:text-[#CCC6C6] text-black-10 uppercase py-2 px-3">
+              <p className="text-lg dark:text-white-50 text-black-10 uppercase py-2 px-3">
                 {secondCard.title}
               </p>
               <h3
@@ -81,7 +81,7 @@ const CatalystStats: React.FC = () => {
               className="w-full h-auto rounded-lg"
             />
             <div className="absolute top-0 left-0 w-full h-full p-6 z-10 flex flex-col rounded-lg gap-y-3">
-              <p className="text-lg dark:text-[#CCC6C6] text-black-10 uppercase py-2 px-3">
+              <p className="text-lg dark:text-white-50 text-black-10 uppercase py-2 px-3">
                 {thirdCard.title}
               </p>
               <h3
@@ -97,12 +97,11 @@ const CatalystStats: React.FC = () => {
           </div>
 
           {/* World-Class Backers Card */}
-          {/* Optionally, you can set different background colors or styles based on the theme */}
           <div
             className={`rounded-lg p-6 w-4/5 flex flex-col ${
               theme === "dark"
-                ? "bg-[#2E1D1D] text-[#FA6A5E]"
-                : "bg-[#ffe5e5] text-[#AD2022]"
+                ? "bg-backersDarkBg text-backersDarkText"
+                : "bg-backersLightBg text-backersLightText"
             }`}
           >
             <p className="uppercase font-semibold text-[32px] mb-[132px]">

@@ -1,4 +1,4 @@
-import { LOGOS } from "./images";
+import { LOGOS } from "./Images";
 
 export const navbarContent = {
   title: "catalysis",
