@@ -1,0 +1,52 @@
+import React from "react";
+import Image from "next/image";
+import { blogs, blogsSectionContent } from "../../content/Blog";
+
+const BlogsSection: React.FC = () => {
+  return (
+    <section className="px-8 md:px-20">
+      <div className="flex justify-between items-center mb-8">
+        <div>
+          <h2 className="text-4xl font-semibold mb-4">
+            {blogsSectionContent.heading}
+          </h2>
+          <p className="max-w-xl dark:text-gray-300">
+            {blogsSectionContent.description}
+          </p>
+        </div>
+        <button className="dark:text-black text-white dark:bg-white bg-black font-semibold px-5 py-2 rounded-full shadow">
+          {blogsSectionContent.buttonText}
+        </button>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {blogs.map((blog, idx) => (
+          <div
+            key={idx}
+            className="rounded overflow-hidden dark:bg-blogCardDark bg-lightCard1"
+          >
+            <div className="w-full aspect-[3/2] bg-white">
+              <Image
+                src={blog.img}
+                alt={blog.title}
+                width={400}
+                height={300}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-4">
+              <h3 className="text-[28px] dark:text-white text-blogTitle mb-4 line-clamp-2">
+                {blog.title}
+              </h3>
+              <p className="dark:text-gray text-[16px] line-clamp-3">
+                {blog.desc}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default BlogsSection;

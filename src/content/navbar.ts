@@ -1,4 +1,13 @@
+import { LOGOS } from "./Images";
+
 export const navbarContent = {
-  title: "Navbar",
-  toggleButton: "Toggle Theme",
+  title: "catalysis",
+  darkLogoSrc: LOGOS.LIGHT,
+  logoSrc: LOGOS.DARK,
+  links: [
+    { label: "Ecosystem", href: "#" },
+    { label: "Roadmap", href: "#" },
+    { label: "Blog", href: "#" },
+    { label: "Docs", href: "#" },
+  ],
 };
