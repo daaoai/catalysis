@@ -80,3 +80,8 @@ export const PARTNERS = {
   LIGHT: "/partners_black.svg",
   DARK: "/partners.svg",
 };
+
+export const ECOSYSTEM_FOOTER = {
+  LIGHT: "/ecosystem_footer.svg",
+  DARK: "/ecosystem_footer_dark.svg",
+};

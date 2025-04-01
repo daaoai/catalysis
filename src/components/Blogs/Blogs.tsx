@@ -35,7 +35,7 @@ const BlogsSection: React.FC = () => {
               />
             </div>
             <div className="p-4">
-              <h3 className="text-[28px] dark:text-white text-blogTitle mb-4 line-clamp-2">
+              <h3 className="text-[28px] dark:text-gray text-blogTitle mb-4 line-clamp-2">
                 {blog.title}
               </h3>
               <p className="dark:text-gray text-[16px] line-clamp-3">

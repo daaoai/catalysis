@@ -7,6 +7,7 @@ import {
   PARTNER_LOGOS,
   PARTNER_LOGOS_DARK,
 } from "@/content/Images";
+import Footer from "./Footer";
 
 const PartnerShowcase: React.FC = () => {
   const { theme } = useTheme();
@@ -23,7 +24,7 @@ const PartnerShowcase: React.FC = () => {
 
   return (
     <div
-      className="min-h-screen bg-cover bg-center flex flex-col items-center justify-between px-4 py-16 font-walsheim"
+      className="h-[880px] bg-cover bg-center flex flex-col items-center justify-between px-4 pt-[120px] pb-[200px] font-walsheim"
       style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
       <div className="text-center mb-10 pt-10">
@@ -56,7 +57,7 @@ const PartnerShowcase: React.FC = () => {
         })}
       </div>
 
-      <div className="mt-16 w-full border-t border-partnerBorder dark:border-partnerBorderDark max-w-4xl" />
+      <Footer />
     </div>
   );
 };

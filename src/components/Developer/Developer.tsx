@@ -19,10 +19,30 @@ const DeveloperHub: React.FC = () => {
   const { title, description, buttonStart, buttonDocs, tags } =
     developerHubContent;
 
+  // Calculate arc positions for each tag
+  const calculateArcPosition = (index: number, total: number) => {
+    // Arc parameters
+    const radius = 300; // Increased radius for more spacing
+    const arcAngle = 60; // Total arc angle in degrees
+    const startAngle = -30; // Starting angle (negative is to the left)
+
+    // Calculate the angle for this tag
+    const angle = startAngle + (index / (total - 1)) * arcAngle;
+
+    // Convert angle to radians
+    const radians = (angle * Math.PI) / 180;
+
+    // Calculate x and y position
+    const x = Math.cos(radians) * radius;
+    const y = Math.sin(radians) * radius;
+
+    return { x, y, angle };
+  };
+
   return (
     <section
-      className="relative w-full min-h-screen bg-cover bg-center text-white flex items-center justify-center px-6"
-      style={{ backgroundImage: `url('${backgroundImage}')` }}
+      className="relative w-full min-h-screen bg-cover bg-center text-white flex items-center justify-center px-6 overflow-hidden font-walsheim"
+      style={{ backgroundImage: `url('${backgroundImage}')` }} // dynamic
     >
       <div className="text-center max-w-2xl z-10">
         <h1 className="text-5xl font-semibold mb-6">{title}</h1>
@@ -37,34 +57,34 @@ const DeveloperHub: React.FC = () => {
         </div>
       </div>
 
-      {/* Floating Tags */}
-      <div className="absolute right-6 md:right-20 top-1/2 transform -translate-y-1/2 flex flex-col gap-6 z-0">
-        {tags.map((tag, index) => (
-          <div
-            key={index}
-            className="px-6 py-3 w-[280px] text-sm font-medium flex items-center gap-3 justify-start my-4"
-            style={{
-              borderRadius: "9999px",
-              border: "1px solid #A3FF6D",
-              color: "#E3FFD6",
-              background: "rgba(163, 255, 109, 0.05)",
-              boxShadow: "0 0 10px rgba(163, 255, 109, 0.3)",
-              transform: `rotate(${(index - 2.5) * 8}deg)`,
-              fontFamily: "'Inter', sans-serif",
-            }}
-          >
-            <span
+      {/* Arc Floating Tags with Increased Vertical Spacing */}
+      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-0 w-full h-full pointer-events-none">
+        {tags.map((tag, index) => {
+          // Calculate position on the arc
+          const { x, y, angle } = calculateArcPosition(index, tags.length);
+
+          // Add vertical offset based on index to increase spacing
+          const verticalSpacing = 40;
+          const verticalOffset = index * verticalSpacing;
+
+          return (
+            <div
+              key={index}
+              // All fixed styles are defined via Tailwind classes below
+              className="absolute px-6 py-3 w-[260px] text-xl font-normal flex items-center gap-3 justify-start rounded-full border bg-[rgba(163,255,109,0.05)]"
               style={{
-                width: "10px",
-                height: "10px",
-                backgroundColor: "#A3FF6D",
-                borderRadius: "2px",
-                display: "inline-block",
+                // dynamic properties that can't be predetermined by Tailwind
+                right: `calc(25% - ${x}px)`,
+                top: `calc(33% + ${y}px + ${verticalOffset}px)`,
+                borderColor: "#628E14",
+                transform: `rotate(${angle}deg)`,
               }}
-            />
-            {tag}
-          </div>
-        ))}
+            >
+              <span className="inline-block w-[12px] h-[12px] dark:bg-[#A0CF4D] rounded-[2px]" />
+              {tag}
+            </div>
+          );
+        })}
       </div>
     </section>
   );
