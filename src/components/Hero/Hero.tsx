@@ -20,7 +20,7 @@ const HeroSection: React.FC = () => {
   return (
     <div className="w-full flex flex-col">
       <div
-        className="relative w-full h-screen bg-no-repeat bg-cover bg-center font-walsheim"
+        className="relative w-full h-screen bg-no-repeat bg-cover bg-center font-walsheim "
         style={{ backgroundImage: `url('${backgroundImage}')` }}
       >
         {/* Main Content */}
