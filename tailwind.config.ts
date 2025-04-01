@@ -47,36 +47,43 @@ export default {
         lightCard3: "#fff9f0",
         darkCard3: "#52360B",
         // Roadmap Component Colors
-        roadmapItemLight: "#ffddab", // Light mode background for roadmap items
-        roadmapItemDark: "#3B2607", // Dark mode background for roadmap items
-        roadmapBoxLight: "#3B2607", // Light mode background for roadmap box (quarter/year container)
-        roadmapBoxLightText: "#F4AB3E", // Light mode text for the roadmap box
-        roadmapBoxDark: "#F4AB3E", // Dark mode background for the roadmap box
-        roadmapBoxDarkText: "#3B2607", // Dark mode text for the roadmap box
+        roadmapItemLight: "#ffddab",
+        roadmapItemDark: "#3B2607",
+        roadmapBoxLight: "#3B2607",
+        roadmapBoxLightText: "#F4AB3E",
+        roadmapBoxDark: "#F4AB3E",
+        roadmapBoxDarkText: "#3B2607",
         // CatalystStats / Stat Cards Colors
-        statCard1Light: "#C87E10", // First card text in light mode
-        statCard1Dark: "#F4AB3E", // First card text in dark mode
-        statCard2: "#B417D7", // Second card text (same in both modes)
-        statCard3Light: "#085A95", // Third card text in light mode
-        statCard3Dark: "#58B2F4", // Third card text in dark mode
-        backersDarkBg: "#2E1D1D", // Backers card background in dark mode
-        backersDarkText: "#FA6A5E", // Backers card text in dark mode
-        backersLightBg: "#ffe5e5", // Backers card background in light mode
-        backersLightText: "#AD2022", // Backers card text in light mode
+        statCard1Light: "#C87E10",
+        statCard1Dark: "#F4AB3E",
+        statCard2: "#B417D7",
+        statCard3Light: "#085A95",
+        statCard3Dark: "#58B2F4",
+        backersDarkBg: "#2E1D1D",
+        backersDarkText: "#FA6A5E",
+        backersLightBg: "#ffe5e5",
+        backersLightText: "#AD2022",
         // PartnerShowcase Colors
-        partnerHeaderDark: "#E7E7E7", // Header subtitle in dark mode
-        partnerNetworksLight: "#AD2022", // Networks title in light mode
-        partnerNetworksDark: "#FA6A5E", // Networks title in dark mode
-        partnerBorder: "#FFE5E5", // Border color for the bottom divider
+        partnerHeaderDark: "#E7E7E7",
+        partnerNetworksLight: "#AD2022",
+        partnerNetworksDark: "#FA6A5E",
+        partnerBorder: "#FFE5E5",
         partnerBorderDark: "#2F2020",
         // FAQContentection Colors
-        faqToggleDarkBg: "#2E2E2D", // Toggle container dark background
-        faqToggleLightBg: "rgba(181,224,255,0.30)", // Toggle container light background
-        faqNonSelectedDark: "#A6A6A6", // Non-selected toggle text in dark mode
-        faqQuestionDark: "#FDFDFD", // FAQ question text in dark mode
-        faqAnswerDark: "#A6A6A6", // FAQ answer text in dark mode
+        faqToggleDarkBg: "#2E2E2D",
+        faqToggleLightBg: "rgba(181,224,255,0.30)",
+        faqNonSelectedDark: "#A6A6A6",
+        faqQuestionDark: "#FDFDFD",
+        faqAnswerDark: "#A6A6A6",
         // FeaturesSection Colors
-        featuresAnswerDark: "#C3C3C3", // Feature card description text in dark mode
+        featuresAnswerDark: "#C3C3C3",
+
+        // DeveloperHub Colors (from hex codes in DeveloperHub component)
+        devPrimary: "#323131", // Used for text and button background
+        devTagBackground: "#F8FFEB", // Background for arc floating tags
+        devTagBorder: "#C0E67E", // Border for arc floating tags
+        devTagDot: "#65970C", // Tag dot color (light mode)
+        devTagDotDark: "#A0CF4D", // Tag dot color (dark mode)
       },
       backgroundImage: {},
       keyframes: {

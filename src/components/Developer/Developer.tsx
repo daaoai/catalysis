@@ -41,17 +41,19 @@ const DeveloperHub: React.FC = () => {
 
   return (
     <section
-      className="relative w-full min-h-screen bg-cover bg-center text-white flex items-center justify-center px-6 overflow-hidden font-walsheim"
-      style={{ backgroundImage: `url('${backgroundImage}')` }} // dynamic
+      className="relative w-full min-h-screen bg-cover bg-center text-[#323131] dark:text-white flex items-center justify-center px-6 overflow-hidden font-walsheim"
+      style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
       <div className="text-center max-w-2xl z-10">
-        <h1 className="text-5xl font-semibold mb-6">{title}</h1>
-        <p className="text-gray-200 text-lg mb-10">{description}</p>
+        <h1 className="text-[72px] font-medium mb-6">{title}</h1>
+        <p className="dark:text-gray-200 font-normal text-lg mb-10">
+          {description}
+        </p>
         <div className="flex justify-center gap-6 flex-wrap">
-          <button className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition">
+          <button className="dark:bg-white bg-[#323131] text-white dark:text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition">
             {buttonStart}
           </button>
-          <button className="border border-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-black transition">
+          <button className="border border-[#323131] dark:border-white px-6 py-3 rounded-full font-medium hover:text-white  dark:hover:text-black transition">
             {buttonDocs}
           </button>
         </div>
@@ -70,17 +72,14 @@ const DeveloperHub: React.FC = () => {
           return (
             <div
               key={index}
-              // All fixed styles are defined via Tailwind classes below
-              className="absolute px-6 py-3 w-[260px] text-xl font-normal flex items-center gap-3 justify-start rounded-full border bg-[rgba(163,255,109,0.05)]"
+              className="absolute px-6 py-3 w-[260px] text-xl font-normal flex items-center gap-3 justify-start rounded-full border dark:bg-[rgba(163,255,109,0.05)] bg-[#F8FFEB] border-[#C0E67E] dark:border-[#628E14]"
               style={{
-                // dynamic properties that can't be predetermined by Tailwind
                 right: `calc(25% - ${x}px)`,
                 top: `calc(33% + ${y}px + ${verticalOffset}px)`,
-                borderColor: "#628E14",
                 transform: `rotate(${angle}deg)`,
               }}
             >
-              <span className="inline-block w-[12px] h-[12px] dark:bg-[#A0CF4D] rounded-[2px]" />
+              <span className="inline-block w-[12px] h-[12px] bg-[#65970C] dark:bg-[#A0CF4D] rounded-[2px]  " />
               {tag}
             </div>
           );
