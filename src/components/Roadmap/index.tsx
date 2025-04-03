@@ -24,15 +24,15 @@ const Roadmap: React.FC = () => {
     >
       <div className="max-w-5xl mx-auto">
         <h2 className="text-4xl mb-4">{roadmapSection.heading}</h2>
-        <p className="text-sm text-black dark:text-gray-300 max-w-md mb-16">
+        <p className="text-sm text-black-10 dark:text-gray-300 max-w-md mb-16">
           {roadmapSection.description}
         </p>
 
-        <div className="space-y-10">
+        <div className="space-y-10 hidden md:block">
           {roadmapItems.map((item, idx) => (
             <div
               key={idx}
-              className="flex items-center w-full max-w-[574px] p-4 rounded-xl bg-roadmapItemLight dark:bg-roadmapItemDark backdrop-blur-xl"
+              className="flex ml-0 md:ml-[${idx * 18}rem] items-center w-full max-w-[574px] p-4 rounded-xl bg-roadmapItemLight dark:bg-roadmapItemDark backdrop-blur-xl"
               style={{ marginLeft: `${idx * 18}rem` }}
             >
               <div className="w-[100px] h-[106px] font-bold text-center px-4 py-2 rounded mr-6 font-walsheim bg-roadmapBoxLight text-roadmapBoxLightText dark:bg-roadmapBoxDark dark:text-roadmapBoxDarkText">
@@ -43,7 +43,28 @@ const Roadmap: React.FC = () => {
                 <h3 className="text-2xl dark:text-white text-roadmapBoxLight font-walsheim font-semibold mb-2">
                   {item.title}
                 </h3>
-                <p className="text-sm dark:text-gray text-black font-walsheim">
+                <p className="text-sm dark:text-gray text-black-10 font-walsheim">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="space-y-10 md:hidden">
+          {roadmapItems.map((item, idx) => (
+            <div
+              key={idx}
+              className="flex ml-0 md:ml-[${idx * 18}rem] items-center w-full max-w-[574px] p-4 rounded-xl bg-roadmapItemLight dark:bg-roadmapItemDark backdrop-blur-xl"
+            >
+              <div className="w-[100px] h-[106px] font-bold text-center px-4 py-2 rounded mr-6 font-walsheim bg-roadmapBoxLight text-roadmapBoxLightText dark:bg-roadmapBoxDark dark:text-roadmapBoxDarkText">
+                <div className="text-[40px] leading-none">{item.quarter}</div>
+                <div className="text-[48px] leading-none">{item.year}</div>
+              </div>
+              <div>
+                <h3 className="text-2xl dark:text-white text-roadmapBoxLight font-walsheim font-semibold mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-sm dark:text-gray text-black-10 font-walsheim">
                   {item.description}
                 </p>
               </div>
