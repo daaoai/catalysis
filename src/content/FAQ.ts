@@ -29,5 +29,5 @@ export const faqContent: FAQ[] = [
 export const faqPageContent = {
   heading: "FAQs",
   description:
-    "Lorem ultriceipsum dolor sit amet consectetur. Mauris cursus sit nulla faucibus urna. Molestie elit magna rhoncus posuere amet etiam duis pharetra. Nascetur porttitor tellusultrices lacinia nunc vestibulum ultricies ante elementum quam.",
+    "Got questions about Catalysis, restaking, or how to get started? We’ve got answers - straight and simple.",
 };

@@ -16,7 +16,7 @@ export interface Feature {
 export const featurePageContent = {
   title: "Features",
   description:
-    "Lorem ultriceipsum dolor sit amet consectetur. Mauris cursus sit nulla faucibus urna. Molestie elit magna rhoncus posuere amet etiam duis pharetra. Nascetur porttitor tellusultrices lacinia nunc vestibulum ultricies ante elementum quam.",
+    "Explore the core benefits of building with Catalysis - from security and infrastructure to speed and simplicity.",
   button: "Start Building",
 };
 

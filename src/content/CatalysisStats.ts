@@ -55,7 +55,7 @@ export const statCards: StatCard[] = [
 export const pageHeading = {
   title: "Catalysis by the numbers",
   subtitle:
-    "Lorem ultriceipsum dolor sit amet consectetur. Mauris cursus sit nulla faucibus urna. Molestie elit magna rhoncus",
+    "From security coverage to speed of deployment - here’s how Catalysis is transforming the restaking landscape, one number at a time.",
 };
 
 export const backers = [

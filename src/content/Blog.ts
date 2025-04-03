@@ -27,6 +27,6 @@ export const blogs: Blog[] = [
 export const blogsSectionContent = {
   heading: "Blogs",
   description:
-    "Lorem ultriceipsum dolor sit amet consectetur. Mauris cursus sit nulla faucibus urna. Molestie elit magna rhoncus posuere amet etiam duis pharetra. Nascetur porttitor tellusultrices lacinia nunc vestibulum ultricies ante elementum quam.",
+    "Stay updated with the latest from the Catalysis ecosystem - deep dives, dev updates, partner spotlights, and everything shaping the future of shared security.",
   buttonText: "View All",
 };
