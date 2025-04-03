@@ -8,12 +8,12 @@ const FAQContentection: React.FC = () => {
   const [openQuestion, setOpenQuestion] = useState<number | null>(0);
 
   return (
-    <div className="px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="px-8 grid grid-cols-1 md:grid-cols-2 gap-8 bg-white">
       <div>
         <h1 className="text-4xl font-semibold mb-6">
           {faqPageContent.heading}
         </h1>
-        <p className="dark:text-gray-300 text-black-10 max-w-md">
+        <p className="dark:text-gray-300 text-black max-w-md">
           {faqPageContent.description}
         </p>
       </div>
@@ -26,7 +26,7 @@ const FAQContentection: React.FC = () => {
               onClick={() => setSelectedUser(idx)}
               className={`px-5 py-2 rounded-full transition-all duration-200 text-sm font-medium ${
                 selectedUser === idx
-                  ? "dark:bg-zinc-900 dark:text-white bg-white text-black-10"
+                  ? "dark:bg-zinc-900 dark:text-white bg-white text-black"
                   : "dark:text-faqNonSelectedDark text-black-20"
               }`}
             >
@@ -52,7 +52,7 @@ const FAQContentection: React.FC = () => {
                 />
               </button>
               {openQuestion === index && faq.answer && (
-                <p className="mt-2 dark:text-faqAnswerDark text-black-10 text-sm max-w-lg">
+                <p className="mt-2 dark:text-faqAnswerDark text-black text-sm max-w-lg">
                   {faq.answer}
                 </p>
               )}

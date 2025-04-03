@@ -11,14 +11,14 @@ const FeaturesSection: React.FC = () => {
   if (!mounted) return null;
 
   return (
-    <section className="px-6 md:px-20">
+    <section className="px-6 md:px-20 bg-white">
       {/* Header */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
         <div className="max-w-2xl">
           <h2 className="text-4xl font-semibold mb-4">
             {featurePageContent.title}
           </h2>
-          <p className="text-black-10 dark:text-gray-300">
+          <p className="text-black dark:text-gray-300">
             {featurePageContent.description}
           </p>
         </div>
@@ -43,8 +43,10 @@ const FeaturesSection: React.FC = () => {
               className="h-72 w-full object-contain mb-6 mt-8"
             />
             <div className="p-4">
-              <h3 className="text-lg font-semibold mb-3">{feature.title}</h3>
-              <p className="text-sm text-black-10 dark:text-featuresAnswerDark">
+              <h3 className="text-lg font-semibold mb-3 text-black">
+                {feature.title}
+              </h3>
+              <p className="text-sm text-black dark:text-featuresAnswerDark">
                 {feature.description}
               </p>
             </div>

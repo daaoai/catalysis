@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Navigation Links */}
-      <div className="flex space-x-8 dark:text-gray text-black-10 text-lg">
+      <div className="flex space-x-8 dark:text-gray text-black text-lg">
         {navbarContent.links.map((link, idx) => {
           const sectionId = link.href.replace("#", "");
           return (

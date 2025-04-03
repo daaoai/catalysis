@@ -24,7 +24,7 @@ const Roadmap: React.FC = () => {
     >
       <div className="max-w-5xl mx-auto">
         <h2 className="text-4xl mb-4">{roadmapSection.heading}</h2>
-        <p className="text-sm text-black-10 dark:text-gray-300 max-w-md mb-16">
+        <p className="text-sm text-black dark:text-gray-300 max-w-md mb-16">
           {roadmapSection.description}
         </p>
 
@@ -43,7 +43,7 @@ const Roadmap: React.FC = () => {
                 <h3 className="text-2xl dark:text-white text-roadmapBoxLight font-walsheim font-semibold mb-2">
                   {item.title}
                 </h3>
-                <p className="text-sm dark:text-gray text-black-10 font-walsheim">
+                <p className="text-sm dark:text-gray text-black font-walsheim">
                   {item.description}
                 </p>
               </div>

@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
   const currentTheme = theme;
 
   return (
-    <footer className="w-full  font-walsheim">
+    <footer className="w-full font-walsheim bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-8 justify-between">
           {/* Logo and Social Links */}
