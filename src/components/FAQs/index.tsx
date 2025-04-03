@@ -35,11 +35,11 @@ const FAQContentection: React.FC = () => {
           ))}
         </div>
 
-        <div className="space-y-16">
+        <div className="flex flex-col gap-4">
           {faqContent.map((faq, index: number) => (
             <div key={index}>
               <button
-                className="w-full text-left flex justify-between items-center text-[24px] font-medium dark:text-faqQuestionDark"
+                className="w-full text-left flex justify-between items-center text-[20px] font-normal dark:text-faqQuestionDark"
                 onClick={() =>
                   setOpenQuestion(openQuestion === index ? null : index)
                 }
@@ -51,11 +51,17 @@ const FAQContentection: React.FC = () => {
                   }`}
                 />
               </button>
-              {openQuestion === index && faq.answer && (
-                <p className="mt-2 dark:text-faqAnswerDark text-black text-sm max-w-lg">
-                  {faq.answer}
-                </p>
-              )}
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  openQuestion === index ? "max-h-[500px]" : "max-h-0"
+                }`}
+              >
+                {openQuestion === index && faq.answer && (
+                  <p className="mt-2 dark:text-faqAnswerDark text-black text-sm max-w-lg">
+                    {faq.answer}
+                  </p>
+                )}
+              </div>
             </div>
           ))}
         </div>

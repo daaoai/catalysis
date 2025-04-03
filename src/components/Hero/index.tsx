@@ -33,7 +33,7 @@ const HeroSection: React.FC = () => {
             <p className="mt-6 text-base md:text-lg dark:text-gray text-black max-w-xl text-start">
               {heroContent.subtitle}
             </p>
-            <button className="mt-10 px-6 mx-6 py-3 bg-black text-white dark:bg-white dark:text-black rounded-full font-medium hover:bg-gray-200 transition">
+            <button className="mt-10 px-6 py-3 bg-black text-white dark:bg-white dark:text-black rounded-full font-medium transition">
               {heroContent.buttonText}
             </button>
           </div>
@@ -49,7 +49,7 @@ const HeroSection: React.FC = () => {
               {heroContent.subtitle}
             </p>
             <div>
-              <button className="mt-10 px-6 mx-6 py-3 bg-black text-white dark:bg-white dark:text-black rounded-full font-medium hover:bg-gray-200 transition">
+              <button className="mt-10 px-6 py-3 bg-black text-white dark:bg-white dark:text-black rounded-full font-medium transition">
                 {heroContent.buttonText}
               </button>
             </div>

@@ -3,24 +3,32 @@ export interface Blog {
   desc: string;
   img: string;
   lightBg?: boolean;
+  textColor: string;
+  bgColor: string;
 }
 
 export const blogs: Blog[] = [
   {
     title: "Shared Security Abstraction",
     desc: "In the rapidly evolving landscape of blockchains, restaking or shared security has emerged as a pivotal concept.",
-    img: "/blog.svg",
+    img: "/sharedSecurity.svg",
+    textColor: "#095993",
+    bgColor: "#B5E0FF",
   },
   {
     title: "Catalysis: Enabling a Future with Thousands of AVSs",
     desc: "In the rapidly evolving world of decentralization, shared security (or restaking) has emerged as a powerful mechanism to bootstrap",
     img: "/blog.svg",
+    textColor: "#8C1AA9",
+    bgColor: "#F9E1FF",
   },
   {
     title: "Symbiotic x Catalysis: Expanding the Boundaries of...",
     desc: "Symbiotic is a permissionless shared security protocol that empowers decentralized networks to bootstrap economic security efficiently.",
-    img: "/blog.svg",
+    img: "/symbiotic.svg",
     lightBg: true,
+    textColor: "#323131",
+    bgColor: "#FFE1B5",
   },
 ];
 

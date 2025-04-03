@@ -70,10 +70,10 @@ const DeveloperHub: React.FC = () => {
             {description}
           </p>
           <div className="flex justify-center gap-6 flex-wrap">
-            <button className="dark:bg-white bg-[#323131] text-white dark:text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition">
+            <button className="dark:bg-white bg-[#323131] text-white dark:text-black px-6 py-3 rounded-full font-medium transition">
               {buttonStart}
             </button>
-            <button className="border border-[#323131] text-black dark:border-white px-6 py-3 rounded-full font-medium hover:text-white  dark:hover:text-black transition">
+            <button className="border border-[#323131] text-black dark:border-white px-6 py-3 rounded-full font-medium  dark:hover:text-black transition">
               {buttonDocs}
             </button>
           </div>

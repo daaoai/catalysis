@@ -69,7 +69,7 @@ export const features: Feature[] = [
       dark: FEATURE_IMAGES_DARK.CARD3,
     },
     bgColor: {
-      light: "bg-lightCard3",
+      light: "bg-[#FFF5F5]",
       dark: "bg-darkCard3",
     },
   },

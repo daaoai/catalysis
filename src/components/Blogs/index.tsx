@@ -4,7 +4,7 @@ import { blogs, blogsSectionContent } from "../../content/Blog";
 
 const BlogsSection: React.FC = () => {
   return (
-    <section className="px-8 md:px-20">
+    <section className="px-8">
       <div className="flex justify-between items-center mb-8">
         <div>
           <h2 className="text-4xl font-semibold mb-4">
@@ -23,7 +23,7 @@ const BlogsSection: React.FC = () => {
         {blogs.map((blog, idx) => (
           <div
             key={idx}
-            className="rounded overflow-hidden dark:bg-blogCardDark bg-lightCard1"
+            className="rounded overflow-hidden flex flex-col h-full"
           >
             <div className="w-full aspect-[3/2] bg-white">
               <Image
@@ -34,13 +34,17 @@ const BlogsSection: React.FC = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="p-4">
-              <h3 className="text-[28px] dark:text-gray text-blogTitle mb-4 line-clamp-2">
+            <div
+              className="p-4 flex-1"
+              style={{ backgroundColor: blog.bgColor }}
+            >
+              <h3
+                className="text-[28px] mb-4 line-clamp-2"
+                style={{ color: blog.textColor }}
+              >
                 {blog.title}
               </h3>
-              <p className="dark:text-gray text-[16px] line-clamp-3">
-                {blog.desc}
-              </p>
+              <p className="text-[16px] line-clamp-3">{blog.desc}</p>
             </div>
           </div>
         ))}

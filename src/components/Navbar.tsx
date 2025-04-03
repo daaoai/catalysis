@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
               key={idx}
               href={link.href}
               onClick={(e) => handleScroll(e, sectionId)}
-              className="hover:text-white transition"
+              className="hover:text-black transition"
             >
               {link.label}
             </a>

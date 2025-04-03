@@ -28,7 +28,7 @@ const FeaturesSection: React.FC = () => {
       </div>
 
       {/* Feature Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-24 md:px-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
         {features.map((feature, index) => (
           <div
             key={index}

@@ -27,7 +27,7 @@ export default function Home() {
 
   return (
     <div
-      className={`${theme} flex flex-col gap-[50px] md:gap-[180px] bg-white dark:bg-black-30 text-black dark:text-white`}
+      className={`${theme} flex flex-col gap-[30px] md:gap-[60px] bg-white dark:bg-black-30 text-black dark:text-white`}
     >
       <Navbar
       //  toggleTheme={toggleTheme}
