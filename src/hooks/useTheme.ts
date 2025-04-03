@@ -3,10 +3,10 @@ import { ThemeEnum, type Theme } from "@/types/theme";
 import { useState, useEffect } from "react";
 
 const useTheme = () => {
-  const savedTheme =
-    typeof window !== "undefined"
-      ? (localStorage.getItem("theme") as Theme)
-      : null;
+  // const savedTheme =
+  //   typeof window !== "undefined"
+  //     ? (localStorage.getItem("theme") as Theme)
+  //     : null;
 
   const [theme, setTheme] = useState<Theme>(ThemeEnum.Light);
 

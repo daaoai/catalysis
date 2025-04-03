@@ -8,12 +8,15 @@ import FeaturesSection from "@/components/Features";
 import HeroSection from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import CatalystStats from "@/components/CatalysisStats";
-import Roadmap from "@/components/Roadmap";
+// import Roadmap from "@/components/Roadmap";
 import useTheme from "@/hooks/useTheme";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-  const { theme, toggleTheme } = useTheme();
+  const {
+    theme,
+    //  toggleTheme
+  } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
