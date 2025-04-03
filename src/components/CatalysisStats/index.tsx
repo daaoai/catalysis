@@ -32,7 +32,7 @@ const CatalystStats: React.FC = () => {
               alt={firstCard.title}
               className="w-full h-auto rounded-lg"
             />
-            <div className="absolute top-20 lg:top-28 left-0 w-full h-full p-6 z-10 flex flex-col rounded-lg gap-y-3">
+            <div className="absolute top-0 md:top-20 lg:top-28 left-0 w-full h-full p-2 md:p-6 z-10 flex flex-col rounded-lg gap-y-3">
               <p className="text-lg dark:text-white-50 text-black-10 uppercase py-2 px-3">
                 {firstCard.title}
               </p>
@@ -74,7 +74,7 @@ const CatalystStats: React.FC = () => {
           </div>
 
           {/* Third Card */}
-          <div className="relative w-full -mt-16">
+          <div className="relative w-full md:-mt-16">
             <img
               src={theme === "dark" ? thirdCard.img.dark : thirdCard.img.light}
               alt={thirdCard.title}
@@ -98,13 +98,13 @@ const CatalystStats: React.FC = () => {
 
           {/* World-Class Backers Card */}
           <div
-            className={`rounded-lg p-6 w-4/5 flex flex-col ${
+            className={`rounded-lg p-6 md:w-4/5 flex flex-col ${
               theme === "dark"
                 ? "bg-backersDarkBg text-backersDarkText"
                 : "bg-backersLightBg text-backersLightText"
             }`}
           >
-            <p className="uppercase font-semibold text-[32px] mb-[132px]">
+            <p className="uppercase font-semibold text-[32px] mb-[60px] md:mb-[132px]">
               World-Class Backers
             </p>
             <ul className="space-y-1 text-lg uppercase dark:text-gray text-black-10">

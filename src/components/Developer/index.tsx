@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import useTheme from "@/hooks/useTheme";
 import { developerHubContent } from "@/content/DeveloperHub";
 import { BG_IMAGES, BG_IMAGES_DARK } from "@/content/Images";
+import Image from "next/image";
 
 const DeveloperHub: React.FC = () => {
   const { theme } = useTheme();
@@ -15,6 +16,10 @@ const DeveloperHub: React.FC = () => {
 
   const backgroundImage =
     theme === "dark" ? BG_IMAGES_DARK.DEVELOPER : BG_IMAGES.DEVELOPER;
+  const verticalBgImage =
+    theme === "dark"
+      ? BG_IMAGES.DEVELOPER_HORIZONTAL
+      : BG_IMAGES.DEVELOPER_HORIZONTAL;
 
   const { title, description, buttonStart, buttonDocs, tags } =
     developerHubContent;
@@ -40,27 +45,41 @@ const DeveloperHub: React.FC = () => {
   };
 
   return (
-    <section
-      className="relative w-full min-h-screen bg-cover bg-center text-[#323131] dark:text-white flex items-center justify-center px-6 overflow-hidden font-walsheim"
-      style={{ backgroundImage: `url('${backgroundImage}')` }}
-    >
-      <div className="text-center max-w-2xl z-10">
-        <h1 className="text-[72px] font-medium mb-6">{title}</h1>
-        <p className="dark:text-gray-200 font-normal text-lg mb-10">
-          {description}
-        </p>
-        <div className="flex justify-center gap-6 flex-wrap">
-          <button className="dark:bg-white bg-[#323131] text-white dark:text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition">
-            {buttonStart}
-          </button>
-          <button className="border border-[#323131] dark:border-white px-6 py-3 rounded-full font-medium hover:text-white  dark:hover:text-black transition">
-            {buttonDocs}
-          </button>
+    <section className="flex w-full bg-[#EBFFC9] gap-12 md:gap-20 flex-col md:flex-row text-[#323131] dark:text-white items-center justify-between font-walsheim relative md:min-h-screen md:h-screen">
+      <Image
+        src={backgroundImage}
+        alt=""
+        width={300}
+        height={200}
+        className="hidden md:block h-full object-cover"
+      />
+      <Image
+        src={verticalBgImage}
+        alt=""
+        width={300}
+        height={150}
+        className="flex md:hidden w-full"
+      />
+
+      <div className="">
+        <div className="text-center z-10 md:w-[55%]">
+          <h1 className="text-4xl md:text-[72px] font-medium mb-6">{title}</h1>
+          <p className="dark:text-gray-200 font-normal text-lg mb-10">
+            {description}
+          </p>
+          <div className="flex justify-center gap-6 flex-wrap">
+            <button className="dark:bg-white bg-[#323131] text-white dark:text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition">
+              {buttonStart}
+            </button>
+            <button className="border border-[#323131] dark:border-white px-6 py-3 rounded-full font-medium hover:text-white  dark:hover:text-black transition">
+              {buttonDocs}
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Arc Floating Tags with Increased Vertical Spacing */}
-      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-0 w-full h-full pointer-events-none">
+      <div className="">
         {tags.map((tag, index) => {
           // Calculate position on the arc
           const { x, y, angle } = calculateArcPosition(index, tags.length);
@@ -79,7 +98,7 @@ const DeveloperHub: React.FC = () => {
                 transform: `rotate(${angle}deg)`,
               }}
             >
-              <span className="inline-block w-[12px] h-[12px] bg-[#65970C] dark:bg-[#A0CF4D] rounded-[2px]  " />
+              <span className="inline-block w-[12px] h-[12px] bg-[#65970C] dark:bg-[#A0CF4D] rounded-[2px]" />
               {tag}
             </div>
           );

@@ -22,9 +22,9 @@ export const featurePageContent = {
 
 export const features: Feature[] = [
   {
-    title: "Multi-Ecosystem Support",
+    title: "Unified Shared Security ",
     description:
-      "Build once, deploy anywhere - seamlessly integrate restaking protocols across Ethereum, Babylon, Solana, BSC Chain and many more.",
+      "Access economic security from multiple restaking protocols across Ethereum, Bitcoin, Solana and more - all through a single unified abstraction.",
     image: {
       light: FEATURE_IMAGES.CARD1,
       dark: FEATURE_IMAGES_DARK.CARD1,
@@ -35,9 +35,9 @@ export const features: Feature[] = [
     },
   },
   {
-    title: "Dynamic Security Rebalancing",
+    title: "Simplified Node Infrastructure",
     description:
-      "Rebalance and allocate economic security across multiple re-staking protocols to reduce security costs and spread network risk.",
+      "Run networks on new restaking protocols without building custom infrastructure — simplifying operations for node operators and accelerating onboarding of new networks.",
     image: {
       light: FEATURE_IMAGES.CARD2,
       dark: FEATURE_IMAGES_DARK.CARD2,
@@ -48,11 +48,24 @@ export const features: Feature[] = [
     },
   },
   {
-    title: "Accelerated GTM",
+    title: "Standard Network Stack",
     description:
-      "Launch decentralized networks faster with developer-friendly SDKs, clear documentation and save up to 80% on development costs.",
+      "A shared framework simplifies risk evaluation and delegation for curators and LRTs and makes networks easier to run for node operators.",
     image: {
       light: FEATURE_IMAGES.CARD3,
+      dark: FEATURE_IMAGES_DARK.CARD3,
+    },
+    bgColor: {
+      light: "bg-lightCard3",
+      dark: "bg-darkCard3",
+    },
+  },
+  {
+    title: "Accelerated Go-To-Market",
+    description:
+      "Launch networks faster and cheaper with a modular SDK that abstracts the complexity of shared security infrastructure — simplifying development and cutting time-to-market.",
+    image: {
+      light: FEATURE_IMAGES.CARD4,
       dark: FEATURE_IMAGES_DARK.CARD3,
     },
     bgColor: {

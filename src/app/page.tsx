@@ -1,19 +1,19 @@
 "use client";
 import { useEffect, useState } from "react";
-import BlogsSection from "@/components/Blogs/Blogs";
-import DeveloperHub from "@/components/Developer/Developer";
-import PartnerShowcase from "@/components/Ecosystem/Ecosystem";
-import FAQSection from "@/components/FAQs/FAQ";
-import FeaturesSection from "@/components/Features/Features";
-import HeroSection from "@/components/Hero/Hero";
+import BlogsSection from "@/components/Blogs";
+import DeveloperHub from "@/components/Developer";
+import PartnerShowcase from "@/components/Ecosystem";
+import FAQSection from "@/components/FAQs";
+import FeaturesSection from "@/components/Features";
+import HeroSection from "@/components/Hero";
 import Navbar from "@/components/Navbar";
-import CatalystStats from "@/components/CatalysisStats/CatalysisStats";
-import Roadmap from "@/components/Roadmap/Roadmap";
+import CatalystStats from "@/components/CatalysisStats";
+import Roadmap from "@/components/Roadmap";
 import useTheme from "@/hooks/useTheme";
-import Footer from "@/components/Footer/Footer";
+import Footer from "@/components/Footer";
 
 export default function Home() {
-  const { theme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -24,9 +24,11 @@ export default function Home() {
 
   return (
     <div
-      className={`${theme} flex flex-col gap-[200px] bg-white dark:bg-black-30 text-black dark:text-white`}
+      className={`${theme} flex flex-col gap-[50px] md:gap-[180px] bg-white dark:bg-black-30 text-black dark:text-white`}
     >
-      <Navbar />
+      <Navbar
+      //  toggleTheme={toggleTheme}
+      />
       <div id="hero">
         <HeroSection />
       </div>
@@ -39,9 +41,9 @@ export default function Home() {
       <div id="ecosystem">
         <PartnerShowcase />
       </div>
-      <div id="roadmap">
+      {/* <div id="roadmap">
         <Roadmap />
-      </div>
+      </div> */}
       <div id="blog">
         <BlogsSection />
       </div>

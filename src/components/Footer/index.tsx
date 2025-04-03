@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-8 justify-between">
           {/* Logo and Social Links */}
-          <div className="flex flex-col space-y-6">
+          <div className="flex flex-col space-y-6 items-center md:items-start">
             <Logo />
             <div className="flex space-x-4">
               {FooterContent.socialLinks.map((social) => {
@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-[72px]">
+          <div className="grid grid-cols-3 gap-x-[72px]">
             {Object.entries(FooterContent.navigation).map(
               ([section, links]) => (
                 <div key={section} className="flex flex-col space-y-4">

@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { features, featurePageContent } from "@/content/Features";
 import useTheme from "@/hooks/useTheme";
-
 const FeaturesSection: React.FC = () => {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
-
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -30,7 +28,7 @@ const FeaturesSection: React.FC = () => {
       </div>
 
       {/* Feature Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-24 md:px-20">
         {features.map((feature, index) => (
           <div
             key={index}
@@ -42,7 +40,7 @@ const FeaturesSection: React.FC = () => {
               key={theme}
               src={`${theme === "dark" ? feature.image.dark : feature.image.light}?t=${Date.now()}`}
               alt={feature.title}
-              className="h-56 w-full object-contain mb-6 mt-8"
+              className="h-72 w-full object-contain mb-6 mt-8"
             />
             <div className="p-4">
               <h3 className="text-lg font-semibold mb-3">{feature.title}</h3>

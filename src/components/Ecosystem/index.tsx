@@ -24,7 +24,7 @@ const PartnerShowcase: React.FC = () => {
 
   return (
     <div
-      className="h-[880px] bg-cover bg-center flex flex-col items-center justify-between px-4 pt-[120px] pb-[200px] font-walsheim"
+      className="h-600px md:h-[880px] bg-cover bg-center flex flex-col items-center justify-between px-4 pt-[120px] pb-[200px] font-walsheim"
       style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
       <div className="text-center mb-10 pt-10">
@@ -40,7 +40,7 @@ const PartnerShowcase: React.FC = () => {
         {partnerShowcaseContent.networksTitle}
       </h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-10 max-w-5xl w-full justify-items-center items-center">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl w-full justify-items-center items-center">
         {partners.map((logo: Partner, index: number) => {
           const logoSrc =
             theme === "dark"
@@ -51,7 +51,7 @@ const PartnerShowcase: React.FC = () => {
               key={index}
               src={logoSrc}
               alt={logo.alt}
-              className="h-12 md:h-16 object-contain"
+              className="h-8 md:h-16 object-contain"
             />
           );
         })}

@@ -1,8 +1,10 @@
 export const BG_IMAGES = {
   HERO: "/bg/hero_bg.svg",
+  HERO_HORIZONTAL: "/bg/hero-horizontal.svg",
   ECOSYSTEM: "/bg/ecosystem_bg.svg",
   ROADMAP: "/bg/roadmap_bg.svg",
   DEVELOPER: "/bg/developer_bg.svg",
+  DEVELOPER_HORIZONTAL: "/bg/developer_bg_vertical.svg",
 };
 
 export const BG_IMAGES_DARK = {
@@ -38,6 +40,7 @@ export const FEATURE_IMAGES = {
   CARD1: "/features/card1.svg",
   CARD2: "/features/card2.svg",
   CARD3: "/features/card3.svg",
+  CARD4: "/features/card4.svg",
 };
 
 export const STAT_IMAGES_DARK = {
