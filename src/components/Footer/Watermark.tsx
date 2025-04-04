@@ -8,7 +8,7 @@ const Watermark = () => {
   return (
     <img
       src={watermarkSrc}
-      className="h-[60px] md:h-[260px] w-full"
+      className="h-[60px] md:h-[20rem] w-full"
       alt="Catalysis Watermark"
     />
   );

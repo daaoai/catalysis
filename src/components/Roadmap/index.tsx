@@ -56,7 +56,7 @@ const Roadmap: React.FC = () => {
       className={`relative bg-cover bg-center bg-no-repeat min-h-screen md:px-8 py-16 ${isMobile ? "flex flex-col justify-center" : ""}`}
       style={!isMobile ? { backgroundImage: `url('${backgroundImage}')` } : {}}
     >
-      <div className="max-w-5xl w-[100vw] mx-auto md:pl-0 pl-2">
+      <div className="max-w-[76rem] w-[100vw] mx-auto md:pl-0 pl-2">
         <h2 className="text-[40px] text-[#323131] font-medium mb-4 ">
           {roadmapSection.heading}
         </h2>
