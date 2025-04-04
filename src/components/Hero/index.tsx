@@ -32,23 +32,23 @@ const HeroSection: React.FC = () => {
             <p className="mt-6 text-base md:text-lg dark:text-gray text-[#363636] max-w-xl font-normal text-start font-helvetica">
               {heroContent.subtitle}
             </p>
-            <button className="mt-10 px-6 py-3  text-[20px] font-sans bg-black text-white dark:bg-white dark:text-black rounded-full font-medium transition">
+            <button className="mt-10 px-6 py-3  text-xs md:text-[20px] font-sans bg-black text-white dark:bg-white dark:text-black rounded-full font-medium transition">
               {heroContent.buttonText}
             </button>
           </div>
         </div>
       </div>
-      <div className="relative md:hidden w-full h-screen flex flex-col gap-4 font-walsheim bg-[#D5E5FF] pt-4 overflow-hidden">
-        <div className="flex items-center justify-end h-full px-8 md:px-16">
+      <div className="relative md:hidden w-full h-[130vh] md:h-screen  flex flex-col gap-4 font-walsheim bg-[#D5E5FF] pt-4 overflow-hidden">
+        <div className="flex items-center justify-end h-full px-8 md:px-16 mt-16 md:mt-0">
           <div className="lg:max-w-4xl text-right flex flex-col items-center justify-end">
-            <h1 className="text-4xl md:text-6xl leading-tight text-center font-walsheim">
+            <h1 className="text-[40px] font-medium md:text-6xl leading-tight text-center font-walsheim">
               {heroContent.title[0]} <br /> {heroContent.title[1]}
             </h1>
             <p className="mt-6 text-base text-center md:text-lg dark:text-gray text-black max-w-xl font-walsheim">
               {heroContent.subtitle}
             </p>
             <div>
-              <button className="mt-10 px-6 py-3 bg-black font-walsheim text-white dark:bg-white text-2xl font-walsheim dark:text-black rounded-full font-medium transition">
+              <button className="mb-16 md:mb-0 text-xs md:text-[20px] mt-10 px-6 py-3 bg-black font-walsheim text-white dark:bg-white font-walsheim dark:text-black rounded-full font-medium transition">
                 {heroContent.buttonText}
               </button>
             </div>

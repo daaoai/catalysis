@@ -24,7 +24,7 @@ const PartnerShowcase: React.FC = () => {
 
   return (
     <div
-      className="h-600px md:h-[880px] md:mt-28 bg-cover bg-center flex flex-col items-center justify-between px-4 pt-[120px] pb-[260px] font-walsheim"
+      className="h-600px md:h-[880px] md:mt-28 bg-cover bg-center flex flex-col items-center justify-between px-4 pt-[120px] pb-[180px] md:pb-[260px] font-walsheim"
       style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
       <div className="text-center pt-10">
@@ -40,8 +40,8 @@ const PartnerShowcase: React.FC = () => {
         {partnerShowcaseContent.networksTitle}
       </h2>
 
-      <div className="max-w-9/12 w-9/12 mx-auto mb-12">
-        <div className="flex md:flex-row flex-col gap-16 flex-wrap w-full justify-center items-center">
+      <div className="max-w-9/12 w-full mx-auto mb-12">
+        <div className="flex gap-7 md:gap-16 flex-wrap w-full justify-center items-center">
           {partners.map((logo: Partner, index: number) => {
             const logoSrc =
               theme === "dark"
