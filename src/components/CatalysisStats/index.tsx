@@ -16,7 +16,7 @@ const CatalystStats: React.FC = () => {
   return (
     <div className="px-6 md:px-20 bg-white">
       <div className="mb-12 max-w-sm">
-        <h2 className="text-3xl md:text-[40px] mb-4 mt-10 font-sans font-medium text-[#323131]">
+        <h2 className="max-w-[16rem] text-3xl md:text-[40px] mb-4 mt-10 font-sans font-medium text-[#323131]">
           {pageHeading.title}
         </h2>
         <p className="dark:text-gray text-[#383737] max-w-md text-sm font-normal font-generalsans">

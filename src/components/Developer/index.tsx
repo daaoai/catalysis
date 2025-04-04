@@ -86,18 +86,18 @@ const DeveloperHub: React.FC = () => {
       />
 
       <div>
-        <div className="text-center z-10 md:w-[55%] flex flex-col items-start justify-start p-6 pt-0">
+        <div className="text-center z-10 md:w-[60%] flex flex-col items-start md:items-center justify-start p-6 pt-0">
           <h1 className="text-4xl md:text-[72px] font-medium mb-6 text-[#323131] font-sans">
             {title}
           </h1>
           <p className="dark:text-gray-200 text-[#383737] font-normal text-base mb-10 text-start font-generalsans">
             {description}
           </p>
-          <div className="flex justify-center gap-6 flex-wrap">
-            <button className="dark:bg-white bg-[#323131] text-2xl font-sans text-white dark:text-black px-6 py-3 rounded-full font-medium transition">
+          <div className="flex justify-center gap-6 ">
+            <button className="dark:bg-white bg-[#323131] text-sm md:text-2xl font-sans text-white dark:text-black px-6 py-3 rounded-full font-medium transition">
               {buttonStart}
             </button>
-            <button className="border border-[#323131] text-2xl font-sans text-black dark:border-white px-6 py-3 rounded-full font-medium  dark:hover:text-black transition">
+            <button className="border border-[#323131] text-sm md:text-2xl font-sans text-black dark:border-white px-6 py-3 rounded-full font-medium  dark:hover:text-black transition">
               {buttonDocs}
             </button>
           </div>
@@ -139,7 +139,7 @@ const DeveloperHub: React.FC = () => {
             key={`mobile-tag-${index}`}
             className="absolute px-3 py-2 w-[180px] text-sm font-normal flex items-center gap-2 justify-start rounded-full border dark:bg-[rgba(163,255,109,0.05)] bg-[#F8FFEB] border-[#C0E67E] dark:border-[#628E14]"
             style={{
-              left: `${pos.x - 30}px`,
+              left: `${pos.x - 64}px`,
               top: `${pos.adjustedY}px`,
               transform: `rotate(${pos.angle}deg)`,
             }}

@@ -5,7 +5,7 @@ export interface Partner {
 
 export const partners: Partner[] = [
   { id: "INFERENCE", alt: "Inference" },
-  { id: "CENTRIFUGE", alt: "Centrifuge" },
+  { id: "CAPX", alt: "CAPX" },
   { id: "JPMORGANCHASE", alt: "JPMorgan Chase" },
   { id: "MONETARY_AUTHORITY", alt: "Monetary Authority of Singapore" },
   { id: "BANCO_CENTRAL", alt: "Banco Central do Brasil" },
