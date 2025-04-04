@@ -13,7 +13,7 @@ const FeaturesSection: React.FC = () => {
 
   return (
     <section className="px-6 md:px-20 bg-white">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-24">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 md:mb-24">
         <div className="max-w-sm">
           <h2 className="text-4xl font-normal mb-4 font-sans">
             {featurePageContent.title}
@@ -22,7 +22,7 @@ const FeaturesSection: React.FC = () => {
             {featurePageContent.description}
           </p>
         </div>
-        <button className="mt-6 font-sans md:mt-0 dark:bg-white font-medium dark:text-black text-white bg-black rounded-full px-6 py-4 transition">
+        <button className="mt-6 font-sans md:mt-0 text-xs md:text-[20px] dark:bg-white font-medium dark:text-black text-white bg-black rounded-full px-6 py-4 transition">
           {featurePageContent.button}
         </button>
       </div>

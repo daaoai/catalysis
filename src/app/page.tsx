@@ -32,7 +32,7 @@ export default function Home() {
       //  toggleTheme={toggleTheme}
       />
       <div
-        className={`${theme} flex flex-col gap-[30px] md:gap-[120px] bg-white dark:bg-black-30 text-black dark:text-white`}
+        className={`${theme} flex flex-col gap-[60px] md:gap-[120px] bg-white dark:bg-black-30 text-black dark:text-white`}
       >
         <div id="hero">
           <HeroSection />
