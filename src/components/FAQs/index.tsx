@@ -35,7 +35,7 @@ const FAQContentection: React.FC = () => {
           ))}
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-10">
           {faqContent.map((faq, index: number) => (
             <div key={index}>
               <button

@@ -46,7 +46,7 @@ const Roadmap: React.FC = () => {
     // Calculate margin left for each card, ensuring it doesn't go below 0.
     const margin = Math.max(
       maxMargin - reversedIndex * mobileOffsetMultiplier,
-      0
+      0,
     );
     return `${margin}px`;
   };
@@ -60,7 +60,7 @@ const Roadmap: React.FC = () => {
         <h2 className="text-[40px] text-[#323131] font-medium mb-4 ">
           {roadmapSection.heading}
         </h2>
-        <p className="text-sm text-[#383737] font-generalsans font-normal dark:text-gray-300 max-w-md mb-16">
+        <p className="text-sm text-[#383737] font-generalsans font-normal dark:text-gray-300 max-w-md mb-28">
           {roadmapSection.description}
         </p>
 

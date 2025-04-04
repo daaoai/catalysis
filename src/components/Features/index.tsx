@@ -17,7 +17,7 @@ const FeaturesSection: React.FC = () => {
     0: { width: "689px", height: "570px" },
     1: { width: "564px", height: "762px" },
     2: { width: "687px", height: "622px" },
-    3: { width: "563px", height: "424px" },
+    3: { width: "563px", height: "430px" },
   };
 
   // Helper function to render each feature.
@@ -145,14 +145,14 @@ const FeaturesSection: React.FC = () => {
 
       <div className="flex flex-col md:flex-row gap-8">
         {/* First column: indexes 0 and 2 */}
-        <div className="flex flex-col gap-8 w-full md:w-[55%]">
+        <div className="flex flex-col gap-0 w-full md:w-[55%]">
           {col1Features.map((feature, i) => {
             const globalIndex = i === 0 ? 0 : 2;
             return renderFeature(feature, globalIndex);
           })}
         </div>
         {/* Second column: indexes 1 and 3 */}
-        <div className="flex flex-col gap-8 w-full md:w-[45%] ">
+        <div className="flex flex-col w-full md:w-[45%] ">
           {col2Features.map((feature, i) => {
             const globalIndex = i === 0 ? 1 : 3;
             return renderFeature(feature, globalIndex);

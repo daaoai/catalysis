@@ -76,7 +76,7 @@ const CatalystStats: React.FC = () => {
           </div>
 
           {/* Third Card */}
-          <div className="relative w-full md:-mt-28 md:h-[29rem]">
+          <div className="relative w-full md:-mt-28 md:h-[20rem]">
             <img
               src={theme === "dark" ? thirdCard.img.dark : thirdCard.img.light}
               alt={thirdCard.title}
