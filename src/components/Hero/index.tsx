@@ -26,7 +26,7 @@ const HeroSection: React.FC = () => {
         {/* Main Content */}
         <div className="flex items-center justify-end h-full px-8 md:px-16 w-full">
           <div className="lg:max-w-4xl text-right flex flex-col items-start justify-start">
-            <h1 className="text-5xl md:text-6xl leading-tight text-start text-[#363636] font-normal font-walsheim">
+            <h1 className="text-5xl md:text-6xl leading-tight text-start text-[#363636] font-normal font-sans">
               {heroContent.title[0]} <br /> {heroContent.title[1]}
             </h1>
             <p className="mt-6 text-base md:text-lg dark:text-gray text-black max-w-xl text-start font-helvetica">

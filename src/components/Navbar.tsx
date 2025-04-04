@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 md:w-1/2 bg-[#C5C6C8] dark:bg-[rgba(28,28,26,0.75)] backdrop-blur-md backdrop-saturate-150 text-white px-10 py-4 rounded-full items-center justify-between z-50">
+      <nav className="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 md:w-1/2 bg-[#EFEFEF] bg-opacity-75 dark:bg-[rgba(28,28,26,0.75)] backdrop-blur-md backdrop-saturate-150 text-white px-10 py-4 rounded-full items-center justify-between z-50">
         <div
           className="flex items-center space-x-2 cursor-pointer"
           onClick={scrollToTop}
@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
             alt={`${navbarContent.title} Logo`}
             className="h-6"
           />
-          <span className="text-2xl font-medium justify-center dark:text-white text-black-20 items-center">
+          <span className="text-2xl font-normal font-generalsans justify-center dark:text-white text-black-20 items-center">
             {navbarContent.title}
           </span>
         </div>

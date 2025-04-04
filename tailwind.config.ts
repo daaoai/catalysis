@@ -106,6 +106,7 @@ export default {
         mabry: ["Mabry Pro", "sans-serif"],
         helvetica: ["Helvetica", "Arial", "sans-serif"],
         sans: ["Satoshi", "sans-serif"],
+        generalsans: ["General Sans", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
