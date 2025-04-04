@@ -40,21 +40,23 @@ const PartnerShowcase: React.FC = () => {
         {partnerShowcaseContent.networksTitle}
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl w-full justify-items-center items-center">
-        {partners.map((logo: Partner, index: number) => {
-          const logoSrc =
-            theme === "dark"
-              ? PARTNER_LOGOS_DARK[logo.id as keyof typeof PARTNER_LOGOS_DARK]
-              : PARTNER_LOGOS[logo.id as keyof typeof PARTNER_LOGOS];
-          return (
-            <img
-              key={index}
-              src={logoSrc}
-              alt={logo.alt}
-              className="h-8 md:h-16 object-contain"
-            />
-          );
-        })}
+      <div className="max-w-9/12 w-9/12 mx-auto">
+        <div className="flex md:flex-row flex-col gap-10 flex-wrap w-full justify-center items-center">
+          {partners.map((logo: Partner, index: number) => {
+            const logoSrc =
+              theme === "dark"
+                ? PARTNER_LOGOS_DARK[logo.id as keyof typeof PARTNER_LOGOS_DARK]
+                : PARTNER_LOGOS[logo.id as keyof typeof PARTNER_LOGOS];
+            return (
+              <img
+                key={index}
+                src={logoSrc}
+                alt={logo.alt}
+                className="h-8 md:h-16 object-contain"
+              />
+            );
+          })}
+        </div>
       </div>
 
       <Footer />
