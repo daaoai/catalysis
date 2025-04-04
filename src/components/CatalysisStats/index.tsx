@@ -34,12 +34,12 @@ const CatalystStats: React.FC = () => {
               alt={firstCard.title}
               className="w-full h-auto rounded-lg"
             />
-            <div className="absolute top-0 md:top-20 lg:top-28 left-0 w-full h-full p-4 md:p-6 z-10 flex flex-col rounded-lg gap-y-2">
+            <div className="absolute top-0 md:top-20 lg:top-24 left-0 w-full h-full p-4 md:p-6 z-10 flex flex-col rounded-lg gap-y-2">
               <p className="text-lg dark:text-white-50 text-black-10 uppercase px-3 font-generalsans font-normal">
                 {firstCard.title}
               </p>
               <h3
-                className={`text-[64px] md:text-4xl lg:text-[96px] font-semibold font-sans sm:leading-[80%] sm:tracking-[-4%] md:leading-normal md:tracking-normal ${
+                className={`text-[64px] md:text-4xl lg:text-[96px] font-semibold font-sans sm:leading-[80%] sm:tracking-[-4%] md:leading-normal md:tracking-normal md:-m-4 ${
                   theme === "dark"
                     ? firstCard.textColor.dark
                     : firstCard.textColor.light
@@ -64,7 +64,7 @@ const CatalystStats: React.FC = () => {
                 {secondCard.title}
               </p>
               <h3
-                className={`text-[64px] md:text-4xl lg:text-[96px] font-semibold font-sans sm:leading-[80%] sm:tracking-[-4%] md:leading-normal md:tracking-normal ${
+                className={`text-[64px] md:text-4xl lg:text-[96px] font-semibold font-sans sm:leading-[80%] sm:tracking-[-4%] md:leading-normal md:tracking-normal md:-m-8${
                   theme === "dark"
                     ? secondCard.textColor.dark
                     : secondCard.textColor.light
@@ -76,18 +76,18 @@ const CatalystStats: React.FC = () => {
           </div>
 
           {/* Third Card */}
-          <div className="relative w-full md:-mt-28 md:h-[20rem]">
+          <div className="md:-top-28 -top-0 relative w-full md:w-[90%] lg:w-[65%] md:ml-auto">
             <img
               src={theme === "dark" ? thirdCard.img.dark : thirdCard.img.light}
               alt={thirdCard.title}
               className="w-full h-auto rounded-lg"
             />
             <div className="absolute top-0 left-0 w-full h-full p-4 md:p-6 z-10 flex flex-col rounded-lg gap-y-2">
-              <p className="text-xs dark:text-white-50 text-black-10 uppercase px-3 font-generalsans">
+              <p className="text-lg dark:text-white-50 text-black-10 uppercase px-3 font-generalsans">
                 {thirdCard.title}
               </p>
               <h3
-                className={`text-[64px] md:text-4xl lg:text-[96px] font-semibold font-sans sm:leading-[80%] sm:tracking-[-4%] md:leading-normal md:tracking-normal ${
+                className={`text-[64px] md:text-4xl lg:text-[96px] font-semibold font-sans sm:leading-[80%] sm:tracking-[-4%] md:leading-normal md:tracking-normal md:-m-8${
                   theme === "dark"
                     ? thirdCard.textColor.dark
                     : thirdCard.textColor.light
@@ -100,14 +100,14 @@ const CatalystStats: React.FC = () => {
 
           {/* World-Class Backers Card */}
           <div
-            className={`rounded-lg p-5 md:p-6 md:w-4/5 flex flex-col ${
+            className={`rounded-lg p-5 md:p-6  flex flex-col w-full md:w-[90%] lg:w-[65%] md:mr-auto ${
               theme === "dark"
                 ? "bg-backersDarkBg text-backersDarkText rounded-lg"
                 : "bg-backersLightBg text-backersLightText rounded-lg"
             }`}
             style={{ borderRadius: "12px" }}
           >
-            <p className="uppercase font-bold text-[32px] mb-[60px] md:mb-[132px] font-sans">
+            <p className="uppercase font-bold text-[32px] mb-[60px] md:mb-[60px] font-sans">
               World-Class Backers
             </p>
             <ul className="space-y-1 uppercase dark:text-gray text-base text-black font-normal font-generalsans">
