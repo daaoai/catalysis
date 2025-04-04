@@ -36,12 +36,12 @@ const Roadmap: React.FC = () => {
 
   return (
     <section
-      className={`relative bg-cover w-[100vw] bg-center bg-no-repeat min-h-screen md:px-8 py-16 ${
+      className={`relative bg-cover bg-center bg-no-repeat min-h-screen md:px-8 py-16 ${
         isMobile ? "flex flex-col justify-center" : ""
       }`}
       style={!isMobile ? { backgroundImage: `url('${backgroundImage}')` } : {}}
     >
-      <div className="max-w-5xl w-[100vw] mx-auto md:pl-0 pl-2">
+      <div className="max-w-5xl mx-auto md:pl-0 pl-2">
         <h2 className="text-[40px] text-[#323131] font-medium mb-4 ">
           {roadmapSection.heading}
         </h2>
@@ -77,16 +77,17 @@ const Roadmap: React.FC = () => {
           ))}
         </div>
 
-        {/* Mobile view */}
-        <div className="block md:hidden max-w-[100vw] overflow-hidden relative">
-          {/* Background image rendered as an <img> */}
-          <img
-            src={backgroundImage}
-            alt="roadmap background"
-            className="absolute inset-0 max-w-[100vw] h-full object-cover"
-            style={{ objectPosition: "right center" }}
-          />
-          <div className="relative z-10 space-y-20 p-4 pt-12">
+        <div className="block md:hidden max-w-[100vw] overflow-hidden">
+          <div
+            className="space-y-20 pr-8 bg-cover bg-no-repeat pt-12"
+            style={{
+              backgroundImage: `url('${backgroundImage}')`,
+              backgroundPosition: "right center",
+              backgroundSize: "cover",
+              width: "100%",
+              maxWidth: "100vw",
+            }}
+          >
             {roadmapItems.map((item, idx) => (
               <div
                 key={idx}
