@@ -5,7 +5,7 @@ import { blogs, blogsSectionContent } from "../../content/Blog";
 const BlogsSection: React.FC = () => {
   return (
     <section className="px-8">
-      <div className="flex justify-between items-end mb-14">
+      <div className="flex flex-col  md:flex-row justify-between items-start md:items-end mb-14">
         <div>
           <h2 className="text-4xl font-medium text-[#323131] mb-4 font-sans">
             {blogsSectionContent.heading}
@@ -14,7 +14,7 @@ const BlogsSection: React.FC = () => {
             {blogsSectionContent.description}
           </p>
         </div>
-        <button className="mt-10 px-6 py-3  text-[20px] font-sans bg-black text-white dark:bg-white dark:text-black rounded-full font-medium transition">
+        <button className="mt-6 md:mt-10 px-6 py-3 text-xs md:text-[20px] font-sans bg-black text-white dark:bg-white dark:text-black rounded-full font-medium transition">
           {blogsSectionContent.buttonText}
         </button>
       </div>
