@@ -3,6 +3,7 @@ export const BG_IMAGES = {
   HERO_HORIZONTAL: "/bg/hero-horizontal.svg",
   ECOSYSTEM: "/bg/ecosystem_bg.svg",
   ROADMAP: "/bg/roadmap_bg.svg",
+  ROADMAP_MOBILE: "/bg/roadmap_bg_mobile.svg",
   DEVELOPER: "/bg/developer_bg.svg",
   DEVELOPER_HORIZONTAL: "/bg/developer_bg_vertical.svg",
 };
@@ -11,6 +12,7 @@ export const BG_IMAGES_DARK = {
   HERO: "/bg/hero_bg_dark.svg",
   ECOSYSTEM: "/bg/ecosystem_bg_dark.svg",
   ROADMAP: "/bg/roadmap_bg_dark.svg",
+  ROADMAP_MOBILE: "/bg/roadmap_bg_mobile.svg",
   DEVELOPER: "/bg/developer_bg_dark.svg",
 };
 
