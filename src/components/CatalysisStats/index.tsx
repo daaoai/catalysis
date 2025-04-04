@@ -64,7 +64,7 @@ const CatalystStats: React.FC = () => {
                 {secondCard.title}
               </p>
               <h3
-                className={`text-[64px] md:text-4xl lg:text-[96px] font-semibold font-sans sm:leading-[80%] sm:tracking-[-4%] md:leading-normal md:tracking-normal md:-m-8${
+                className={`text-[64px] md:text-4xl text-[#B417D7] lg:text-[96px] font-semibold font-sans sm:leading-[80%] sm:tracking-[-4%] md:leading-normal md:tracking-normal md:-m-8${
                   theme === "dark"
                     ? secondCard.textColor.dark
                     : secondCard.textColor.light
@@ -87,7 +87,7 @@ const CatalystStats: React.FC = () => {
                 {thirdCard.title}
               </p>
               <h3
-                className={`text-[64px] md:text-4xl lg:text-[96px] font-semibold font-sans sm:leading-[80%] sm:tracking-[-4%] md:leading-normal md:tracking-normal md:-m-8${
+                className={`text-[64px] md:text-4xl lg:text-[96px] text-[#085A95] font-semibold font-sans sm:leading-[80%] sm:tracking-[-4%] md:leading-normal md:tracking-normal md:-m-8${
                   theme === "dark"
                     ? thirdCard.textColor.dark
                     : thirdCard.textColor.light
