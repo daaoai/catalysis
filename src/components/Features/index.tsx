@@ -75,7 +75,7 @@ const FeaturesSection: React.FC = () => {
             </h3>
             <p
               className={`text-sm font-normal text-[#383737] dark:text-featuresAnswerDark font-sans ${
-                globalIndex === 0 || globalIndex === 2 ? "leading-relaxed" : ""
+                globalIndex === 0 ? "leading-relaxed" : ""
               }`}
             >
               {feature.description}
