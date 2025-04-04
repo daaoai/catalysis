@@ -35,7 +35,6 @@ const FeaturesSection: React.FC = () => {
               theme === "dark" ? feature.bgColor.dark : feature.bgColor.light
             }`}
           >
-            {/* Conditional rendering for the first and fourth items */}
             {index === 0 || index === 3 ? (
               <>
                 <div className="px-8 py-4 md:px-16 md:py-6">

@@ -39,17 +39,21 @@ const FAQContentection: React.FC = () => {
           {faqContent.map((faq, index: number) => (
             <div key={index}>
               <button
-                className="w-full text-left font-generalsans text-[#323131] flex justify-between items-center text-[20px] font-normal dark:text-faqQuestionDark"
+                className="w-full text-left flex justify-between items-start  dark:text-faqQuestionDark gap-4"
                 onClick={() =>
                   setOpenQuestion(openQuestion === index ? null : index)
                 }
               >
-                {faq.question}
-                <ChevronDown
-                  className={`h-6 w-6 transform transition-transform text-[16px] duration-300 ${
-                    openQuestion === index ? "rotate-180" : ""
-                  }`}
-                />
+                <p className="font-generalsans text-[#323131] text-[20px] font-normal">
+                  {faq.question}
+                </p>
+                <div>
+                  <ChevronDown
+                    className={`h-6 w-8 transform transition-transform text-[16px] duration-300 ${
+                      openQuestion === index ? "rotate-180" : ""
+                    }`}
+                  />
+                </div>
               </button>
               <div
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${

@@ -13,14 +13,14 @@ export const blogs: Blog[] = [
     desc: "In the rapidly evolving landscape of blockchains, restaking or shared security has emerged as a pivotal concept.",
     img: "/sharedSecurity.svg",
     textColor: "#095993",
-    bgColor: "#B5E0FF",
+    bgColor: "#F0F9FF",
   },
   {
     title: "Catalysis: Enabling a Future with Thousands of AVSs",
     desc: "In the rapidly evolving world of decentralization, shared security (or restaking) has emerged as a powerful mechanism to bootstrap",
     img: "/blog.svg",
     textColor: "#8C1AA9",
-    bgColor: "#F9E1FF",
+    bgColor: "#FEF9FF",
   },
   {
     title: "Symbiotic x Catalysis: Expanding the Boundaries of...",
@@ -28,7 +28,7 @@ export const blogs: Blog[] = [
     img: "/symbiotic.svg",
     lightBg: true,
     textColor: "#323131",
-    bgColor: "#FFE1B5",
+    bgColor: "#FFF9F0",
   },
 ];
 

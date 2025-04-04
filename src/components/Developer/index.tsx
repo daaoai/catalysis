@@ -80,7 +80,7 @@ const DeveloperHub: React.FC = () => {
         </div>
       </div>
       {/* Arc Floating Tags with Increased Vertical Spacing */}
-      <div className="md:block">
+      <div className="hidden md:block">
         {tags.map((tag, index) => {
           // Calculate position on the arc
           const { x, y, angle } = calculateArcPosition(index, tags.length);

@@ -5,16 +5,16 @@ import { blogs, blogsSectionContent } from "../../content/Blog";
 const BlogsSection: React.FC = () => {
   return (
     <section className="px-8">
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex justify-between items-end mb-14">
         <div>
           <h2 className="text-4xl font-medium text-[#323131] mb-4 font-sans">
             {blogsSectionContent.heading}
           </h2>
-          <p className="max-w-xl dark:text-gray-300 font-walsheim text-base text-[#383737]">
+          <p className="max-w-[37rem] dark:text-gray-300 font-generalsans font-normal text-base text-[#383737]">
             {blogsSectionContent.description}
           </p>
         </div>
-        <button className="dark:text-black hidden md:flex text-white dark:bg-white bg-black font-semibold px-5 py-2 rounded-full shadow">
+        <button className="mt-10 px-6 py-3  text-[20px] font-sans bg-black text-white dark:bg-white dark:text-black rounded-full font-medium transition">
           {blogsSectionContent.buttonText}
         </button>
       </div>

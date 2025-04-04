@@ -16,7 +16,7 @@ export const BG_IMAGES_DARK = {
 
 export const PARTNER_LOGOS = {
   INFERENCE: "/logos/inference_black.svg",
-  CENTRIFUGE: "/logos/centrifuge_black.svg",
+  CAPX: "/logos/capx.svg",
   JPMORGANCHASE: "/logos/jpmorganchase_black.svg",
   MONETARY_AUTHORITY: "/logos/monetary-authority_black.svg",
   BANCO_CENTRAL: "/logos/banco-central_black.svg",
@@ -24,7 +24,7 @@ export const PARTNER_LOGOS = {
 
 export const PARTNER_LOGOS_DARK = {
   INFERENCE: "/logos/inference.svg",
-  CENTRIFUGE: "/logos/centrifuge.svg",
+  CAPX: "/logos/capx.svg",
   JPMORGANCHASE: "/logos/jpmorganchase.svg",
   MONETARY_AUTHORITY: "/logos/monetary-authority.svg",
   BANCO_CENTRAL: "/logos/banco-central.svg",
