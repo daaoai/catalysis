@@ -46,12 +46,19 @@ const FeaturesSection: React.FC = () => {
       : {};
 
     // Combine container classes with dynamic background color.
-    const containerClasses = `flex flex-col h-full rounded-md overflow-hidden border border-thin border-[#8298AB40] mb-8 ${
+    let containerClasses = `flex flex-col h-full rounded-md overflow-hidden border border-thin border-[#8298AB40] mb-8 ${
       theme === "dark" ? feature.bgColor.dark : feature.bgColor.light
     }`;
 
+    // For index 0 add padding on top; for index 2 add padding on bottom.
+    if (globalIndex === 0) {
+      containerClasses += " pt-8";
+    } else if (globalIndex === 2) {
+      containerClasses += " pb-8";
+    }
+
     // Determine the image class based on the index.
-    const imageClass = "h-full w-auto px-8";
+    const imageClass = "h-full w-auto px-3 py-3";
 
     let imageStyle = {};
     if (globalIndex === 3) {
@@ -62,11 +69,15 @@ const FeaturesSection: React.FC = () => {
       // Text above, image below.
       return (
         <div key={globalIndex} style={style} className={containerClasses}>
-          <div className="px-8 py-4 md:py-6">
+          <div className="px-8 py-4 md:px-16 md:py-6">
             <h3 className="text-2xl font-normal mb-3 text-[#323131] font-walsheim">
               {feature.title}
             </h3>
-            <p className="text-sm font-normal text-[#383737] dark:text-featuresAnswerDark font-sans">
+            <p
+              className={`text-sm font-normal text-[#383737] dark:text-featuresAnswerDark font-sans ${
+                globalIndex === 0 || globalIndex === 2 ? "leading-relaxed" : ""
+              }`}
+            >
               {feature.description}
             </p>
           </div>
@@ -93,11 +104,15 @@ const FeaturesSection: React.FC = () => {
               className={imageClass}
             />
           </div>
-          <div className="px-8 py-4 md:py-6">
-            <h3 className="text-lg font-normal mb-3 text-black font-walsheim">
+          <div className="px-8 py-4 md:px-16 md:py-6">
+            <h3 className="text-2xl font-normal mb-3 text-[#323131] font-walsheim">
               {feature.title}
             </h3>
-            <p className="text-sm text-black dark:text-featuresAnswerDark font-normal font-generalsans">
+            <p
+              className={`text-sm text-black dark:text-featuresAnswerDark font-walsheim ${
+                globalIndex === 0 || globalIndex === 2 ? "leading-relaxed" : ""
+              }`}
+            >
               {feature.description}
             </p>
           </div>
@@ -123,21 +138,21 @@ const FeaturesSection: React.FC = () => {
             {featurePageContent.description}
           </p>
         </div>
-        <button className="mt-6 font-sans md:mt-0 dark:bg-white font-medium dark:text-black text-white bg-black rounded-full px-6 py-3 transition">
+        <button className="mt-6 font-sans md:mt-0 dark:bg-white font-medium dark:text-black text-white bg-black rounded-full px-6 py-4 transition">
           {featurePageContent.button}
         </button>
       </div>
 
       <div className="flex flex-col md:flex-row gap-8">
         {/* First column: indexes 0 and 2 */}
-        <div className="flex flex-col gap-8 w-full md:w-1/2">
+        <div className="flex flex-col gap-8 w-full md:w-[55%]">
           {col1Features.map((feature, i) => {
             const globalIndex = i === 0 ? 0 : 2;
             return renderFeature(feature, globalIndex);
           })}
         </div>
         {/* Second column: indexes 1 and 3 */}
-        <div className="flex flex-col gap-8 w-full md:w-1/2 ">
+        <div className="flex flex-col gap-8 w-full md:w-[45%] ">
           {col2Features.map((feature, i) => {
             const globalIndex = i === 0 ? 1 : 3;
             return renderFeature(feature, globalIndex);
