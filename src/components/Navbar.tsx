@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
                 key={idx}
                 href={link.href}
                 onClick={(e) => handleScroll(e, sectionId)}
-                className="hover:tracking-wider hover:font-bold transition font-generalsans text-[#383737]"
+                className="font-generalsans text-[#383737]"
               >
                 {link.label}
               </a>
