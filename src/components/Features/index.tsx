@@ -138,7 +138,7 @@ const FeaturesSection: React.FC = () => {
             {featurePageContent.description}
           </p>
         </div>
-        <button className="mt-6 font-sans md:mt-0 dark:bg-white font-medium dark:text-black text-white bg-black rounded-full px-6 py-4 transition">
+        <button className="mt-6 font-sans md:mt-0 text-xs md:text-[20px] dark:bg-white font-medium dark:text-black text-white bg-black rounded-full px-6 py-4 transition">
           {featurePageContent.button}
         </button>
       </div>

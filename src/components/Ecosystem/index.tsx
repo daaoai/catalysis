@@ -40,7 +40,7 @@ const PartnerShowcase: React.FC = () => {
         {partnerShowcaseContent.networksTitle}
       </h2>
 
-      <div className="max-w-9/12 w-full mx-auto mb-12">
+      <div className="max-w-7xl mx-auto mb-12">
         <div className="flex gap-7 md:gap-16 flex-wrap w-full justify-center items-center">
           {partners.map((logo: Partner, index: number) => {
             const logoSrc =
