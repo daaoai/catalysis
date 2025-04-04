@@ -5,11 +5,110 @@ import useTheme from "@/hooks/useTheme";
 const FeaturesSection: React.FC = () => {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
     setMounted(true);
   }, []);
 
   if (!mounted) return null;
+
+  // Define container dimensions for each index.
+  const dimensions: Record<number, { width: string; height: string }> = {
+    0: { width: "689px", height: "570px" },
+    1: { width: "564px", height: "762px" },
+    2: { width: "687px", height: "622px" },
+    3: { width: "563px", height: "424px" },
+  };
+
+  // Helper function to render each feature.
+  // For indexes 0 and 3, text comes first and image fills the remaining vertical space.
+  // For other indexes, image comes first and then the text.
+  interface Feature {
+    title: string;
+    description: string;
+    bgColor: {
+      dark: string;
+      light: string;
+    };
+    image: {
+      dark: string;
+      light: string;
+    };
+  }
+
+  const renderFeature = (feature: Feature, globalIndex: number) => {
+    // Set inline style with fixed height (and maximum width for container consistency).
+    const style = dimensions[globalIndex]
+      ? {
+          maxWidth: dimensions[globalIndex].width,
+          height: dimensions[globalIndex].height,
+        }
+      : {};
+
+    // Combine container classes with dynamic background color.
+    const containerClasses = `flex flex-col h-full rounded-md overflow-hidden border border-thin border-[#8298AB40] mb-8 ${
+      theme === "dark" ? feature.bgColor.dark : feature.bgColor.light
+    }`;
+
+    // Determine the image class based on the index.
+    const imageClass = "h-full w-auto px-8";
+
+    // Define extra image style for index 3.
+    const imageStyle = globalIndex === 3 ? { maxWidth: "390px" } : {};
+
+    if (globalIndex === 0 || globalIndex === 3) {
+      // Text above, image below.
+      return (
+        <div key={globalIndex} style={style} className={containerClasses}>
+          <div className="px-8 py-4 md:px-16 md:py-6">
+            <h3 className="text-2xl font-normal mb-3 text-[#323131] font-walsheim">
+              {feature.title}
+            </h3>
+            <p className="text-sm font-normal text-[#383737] dark:text-featuresAnswerDark font-sans">
+              {feature.description}
+            </p>
+          </div>
+          <div className="flex-1 flex items-center justify-center p-4">
+            <img
+              key={theme}
+              src={`${theme === "dark" ? feature.image.dark : feature.image.light}?t=${Date.now()}`}
+              alt={feature.title}
+              className={imageClass}
+              style={imageStyle}
+            />
+          </div>
+        </div>
+      );
+    } else {
+      // Image above, text below.
+      return (
+        <div key={globalIndex} style={style} className={containerClasses}>
+          <div className="flex-1 flex items-center justify-center p-4">
+            <img
+              key={theme}
+              src={`${theme === "dark" ? feature.image.dark : feature.image.light}?t=${Date.now()}`}
+              alt={feature.title}
+              className={imageClass}
+            />
+          </div>
+          <div className="px-8 py-4 md:px-16 md:py-6">
+            <h3 className="text-lg font-semibold mb-3 text-black font-walsheim">
+              {feature.title}
+            </h3>
+            <p className="text-sm text-black dark:text-featuresAnswerDark font-walsheim">
+              {feature.description}
+            </p>
+          </div>
+        </div>
+      );
+    }
+  };
+
+  // Arrange columns as:
+  // Column 1: features at index 0 and 2
+  // Column 2: features at index 1 and 3
+  const col1Features = [features[0], features[2]];
+  const col2Features = [features[1], features[3]];
 
   return (
     <section className="px-6 md:px-20 bg-white">
@@ -27,51 +126,21 @@ const FeaturesSection: React.FC = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-        {features.map((feature, index) => (
-          <div
-            key={index}
-            className={`rounded-md overflow-hidden border-[#8298AB40] border-thin ${
-              theme === "dark" ? feature.bgColor.dark : feature.bgColor.light
-            }`}
-          >
-            {index === 0 || index === 3 ? (
-              <>
-                <div className="px-8 py-4 md:px-16 md:py-6">
-                  <h3 className="text-2xl font-normal mb-3 text-[#323131] font-walsheim">
-                    {feature.title}
-                  </h3>
-                  <p className="text-sm font-normal text-[#383737] dark:text-featuresAnswerDark font-sans">
-                    {feature.description}
-                  </p>
-                </div>
-                <img
-                  key={theme}
-                  src={`${theme === "dark" ? feature.image.dark : feature.image.light}?t=${Date.now()}`}
-                  alt={feature.title}
-                  className="h-72 w-full object-contain mt-8"
-                />
-              </>
-            ) : (
-              <>
-                <img
-                  key={theme}
-                  src={`${theme === "dark" ? feature.image.dark : feature.image.light}?t=${Date.now()}`}
-                  alt={feature.title}
-                  className="h-72 w-full object-contain mb-6 mt-8"
-                />
-                <div className="px-8 py-4 md:px-16 md:py-6">
-                  <h3 className="text-lg font-semibold mb-3 text-black font-walsheim">
-                    {feature.title}
-                  </h3>
-                  <p className="text-sm text-black dark:text-featuresAnswerDark font-walsheim">
-                    {feature.description}
-                  </p>
-                </div>
-              </>
-            )}
-          </div>
-        ))}
+      <div className="flex flex-col md:flex-row gap-8">
+        {/* First column: indexes 0 and 2 */}
+        <div className="flex flex-col gap-8 w-full md:w-1/2">
+          {col1Features.map((feature, i) => {
+            const globalIndex = i === 0 ? 0 : 2;
+            return renderFeature(feature, globalIndex);
+          })}
+        </div>
+        {/* Second column: indexes 1 and 3 */}
+        <div className="flex flex-col gap-8 w-full md:w-1/2 ">
+          {col2Features.map((feature, i) => {
+            const globalIndex = i === 0 ? 1 : 3;
+            return renderFeature(feature, globalIndex);
+          })}
+        </div>
       </div>
     </section>
   );
