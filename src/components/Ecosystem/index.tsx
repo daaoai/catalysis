@@ -28,15 +28,15 @@ const PartnerShowcase: React.FC = () => {
       style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
       <div className="text-center pt-10">
-        <h1 className="text-3xl md:text-5xl text-black">
+        <h1 className="text-3xl md:text-5xl text-black font-walsheim">
           {partnerShowcaseContent.headerTitle}
         </h1>
-        <p className="mt-4 text-black dark:text-partnerHeaderDark text-[18px]">
+        <p className="mt-4 text-black dark:text-partnerHeaderDark text-[18px] font-walsheim">
           {partnerShowcaseContent.headerSubtitle}
         </p>
       </div>
 
-      <h2 className="text-lg md:text-3xl text-partnerNetworksLight dark:text-partnerNetworksDark font-medium">
+      <h2 className="text-lg md:text-3xl text-partnerNetworksLight dark:text-partnerNetworksDark font-walsheim font-medium">
         {partnerShowcaseContent.networksTitle}
       </h2>
 

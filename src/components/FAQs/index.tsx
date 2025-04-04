@@ -10,10 +10,10 @@ const FAQContentection: React.FC = () => {
   return (
     <div className="px-8 grid grid-cols-1 md:grid-cols-2 gap-8 bg-white">
       <div>
-        <h1 className="text-4xl font-semibold mb-6">
+        <h1 className="text-4xl font-semibold mb-6 font-walsheim">
           {faqPageContent.heading}
         </h1>
-        <p className="dark:text-gray-300 text-black max-w-md">
+        <p className="dark:text-gray-300 text-black max-w-md font-walsheim">
           {faqPageContent.description}
         </p>
       </div>
@@ -24,7 +24,7 @@ const FAQContentection: React.FC = () => {
             <button
               key={idx}
               onClick={() => setSelectedUser(idx)}
-              className={`px-5 py-2 rounded-full transition-all duration-200 text-sm font-medium ${
+              className={`px-5 py-2 rounded-full font-walsheim transition-all duration-200 text-sm font-medium ${
                 selectedUser === idx
                   ? "dark:bg-zinc-900 dark:text-white bg-white text-black"
                   : "dark:text-faqNonSelectedDark text-black-20"
@@ -39,7 +39,7 @@ const FAQContentection: React.FC = () => {
           {faqContent.map((faq, index: number) => (
             <div key={index}>
               <button
-                className="w-full text-left flex justify-between items-center text-[20px] font-normal dark:text-faqQuestionDark"
+                className="w-full text-left font-walsheim flex justify-between items-center text-[20px] font-normal dark:text-faqQuestionDark"
                 onClick={() =>
                   setOpenQuestion(openQuestion === index ? null : index)
                 }
@@ -57,7 +57,7 @@ const FAQContentection: React.FC = () => {
                 }`}
               >
                 {openQuestion === index && faq.answer && (
-                  <p className="mt-2 dark:text-faqAnswerDark text-black text-sm max-w-lg">
+                  <p className="mt-2 dark:text-faqAnswerDark text-black text-sm max-w-lg font-walsheim">
                     {faq.answer}
                   </p>
                 )}

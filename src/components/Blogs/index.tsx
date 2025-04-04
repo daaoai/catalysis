@@ -7,10 +7,10 @@ const BlogsSection: React.FC = () => {
     <section className="px-8">
       <div className="flex justify-between items-center mb-8">
         <div>
-          <h2 className="text-4xl font-semibold mb-4">
+          <h2 className="text-4xl font-semibold mb-4 font-walsheim">
             {blogsSectionContent.heading}
           </h2>
-          <p className="max-w-xl dark:text-gray-300">
+          <p className="max-w-xl dark:text-gray-300 font-walsheim">
             {blogsSectionContent.description}
           </p>
         </div>
@@ -38,12 +38,14 @@ const BlogsSection: React.FC = () => {
               style={{ backgroundColor: blog.bgColor }}
             >
               <h3
-                className="text-[28px] mb-2 line-clamp-2"
+                className="text-[28px] mb-2 line-clamp-2 font-walsheim"
                 style={{ color: blog.textColor }}
               >
                 {blog.title}
               </h3>
-              <p className="text-[16px] line-clamp-3">{blog.desc}</p>
+              <p className="text-[16px] line-clamp-3 font-walsheim">
+                {blog.desc}
+              </p>
             </div>
           </div>
         ))}

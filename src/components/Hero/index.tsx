@@ -27,13 +27,13 @@ const HeroSection: React.FC = () => {
         {/* Main Content */}
         <div className="flex items-center justify-end h-full px-8 md:px-16 w-full">
           <div className="lg:max-w-4xl text-right flex flex-col items-start justify-start">
-            <h1 className="text-5xl md:text-6xl leading-tight text-start text-black">
+            <h1 className="text-5xl md:text-6xl leading-tight text-start text-black font-walsheim">
               {heroContent.title[0]} <br /> {heroContent.title[1]}
             </h1>
-            <p className="mt-6 text-base md:text-lg dark:text-gray text-black max-w-xl text-start">
+            <p className="mt-6 text-base md:text-lg dark:text-gray text-black max-w-xl text-start font-walsheim">
               {heroContent.subtitle}
             </p>
-            <button className="mt-10 px-6 py-3 bg-black text-white dark:bg-white dark:text-black rounded-full font-medium transition">
+            <button className="mt-10 px-6 py-3 font-walsheim bg-black text-white dark:bg-white dark:text-black rounded-full font-medium transition">
               {heroContent.buttonText}
             </button>
           </div>
@@ -42,14 +42,14 @@ const HeroSection: React.FC = () => {
       <div className="relative md:hidden w-full h-screen flex flex-col gap-4 font-walsheim bg-[#D5E5FF] pt-4 overflow-hidden">
         <div className="flex items-center justify-end h-full px-8 md:px-16">
           <div className="lg:max-w-4xl text-right flex flex-col items-center justify-end">
-            <h1 className="text-4xl md:text-6xl leading-tight text-center">
+            <h1 className="text-4xl md:text-6xl leading-tight text-center font-walsheim">
               {heroContent.title[0]} <br /> {heroContent.title[1]}
             </h1>
-            <p className="mt-6 text-base text-center md:text-lg dark:text-gray text-black max-w-xl">
+            <p className="mt-6 text-base text-center md:text-lg dark:text-gray text-black max-w-xl font-walsheim">
               {heroContent.subtitle}
             </p>
             <div>
-              <button className="mt-10 px-6 py-3 bg-black text-white dark:bg-white dark:text-black rounded-full font-medium transition">
+              <button className="mt-10 px-6 py-3 bg-black font-walsheim text-white dark:bg-white dark:text-black rounded-full font-medium transition">
                 {heroContent.buttonText}
               </button>
             </div>

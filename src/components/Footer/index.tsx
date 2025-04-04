@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
             {Object.entries(FooterContent.navigation).map(
               ([section, links]) => (
                 <div key={section} className="flex flex-col space-y-4">
-                  <h3 className="text-gray-900 dark:text-gray font-semibold">
+                  <h3 className="text-gray-900 dark:text-gray font-semibold font-walsheim">
                     {section}
                   </h3>
                   <ul className="space-y-1">
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
                       <li key={link.label}>
                         <Link
                           href={link.url}
-                          className="text-gray-700 dark:text-white-40 hover:text-gray-900 dark:hover:text-white text-[14px] font-light"
+                          className="text-gray-700 font-walsheim dark:text-white-40 hover:text-gray-900 dark:hover:text-white text-[14px] font-light"
                         >
                           {link.label}
                         </Link>

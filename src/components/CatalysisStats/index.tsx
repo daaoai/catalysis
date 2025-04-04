@@ -16,10 +16,10 @@ const CatalystStats: React.FC = () => {
   return (
     <div className="px-6 md:px-20 bg-white">
       <div className="mb-12">
-        <h2 className="text-3xl md:text-[40px] mb-4 mt-10">
+        <h2 className="text-3xl md:text-[40px] mb-4 mt-10 font-walsheim">
           {pageHeading.title}
         </h2>
-        <p className="dark:text-gray text-black max-w-md text-md">
+        <p className="dark:text-gray text-black max-w-md text-md font-walsheim">
           {pageHeading.subtitle}
         </p>
       </div>
@@ -35,11 +35,11 @@ const CatalystStats: React.FC = () => {
               className="w-full h-auto rounded-lg"
             />
             <div className="absolute top-0 md:top-20 lg:top-28 left-0 w-full h-full p-2 md:p-6 z-10 flex flex-col rounded-lg gap-y-3">
-              <p className="text-lg dark:text-white-50 text-black uppercase py-2 px-3">
+              <p className="text-lg dark:text-white-50 text-black uppercase py-2 px-3 font-walsheim">
                 {firstCard.title}
               </p>
               <h3
-                className={`text-3xl md:text-4xl lg:text-[96px] font-semibold mt-1 ${
+                className={`text-3xl md:text-4xl lg:text-[96px] font-semibold mt-1 font-walsheim ${
                   theme === "dark"
                     ? firstCard.textColor.dark
                     : firstCard.textColor.light
@@ -60,11 +60,11 @@ const CatalystStats: React.FC = () => {
               className="w-full h-auto rounded-lg"
             />
             <div className="absolute top-0 left-0 w-full h-full p-6 z-10 flex flex-col rounded-lg gap-y-3">
-              <p className="text-lg dark:text-white-50 text-black uppercase py-2 px-3">
+              <p className="text-lg dark:text-white-50 text-black uppercase py-2 px-3 font-walsheim">
                 {secondCard.title}
               </p>
               <h3
-                className={`text-3xl md:text-4xl lg:text-[96px] font-semibold mt-1 ${
+                className={`text-3xl md:text-4xl lg:text-[96px] font-semibold mt-1 font-walsheim ${
                   theme === "dark"
                     ? secondCard.textColor.dark
                     : secondCard.textColor.light
@@ -83,11 +83,11 @@ const CatalystStats: React.FC = () => {
               className="w-full h-auto rounded-lg"
             />
             <div className="absolute top-0 left-0 w-full h-full p-6 z-10 flex flex-col rounded-lg gap-y-3">
-              <p className="text-lg dark:text-white-50 text-black uppercase py-2 px-3">
+              <p className="text-lg dark:text-white-50 text-black uppercase py-2 px-3 font-walsheim">
                 {thirdCard.title}
               </p>
               <h3
-                className={`text-3xl md:text-4xl lg:text-[96px] font-semibold mt-1 ${
+                className={`text-3xl md:text-4xl lg:text-[96px] font-semibold mt-1 font-walsheim ${
                   theme === "dark"
                     ? thirdCard.textColor.dark
                     : thirdCard.textColor.light
@@ -106,10 +106,10 @@ const CatalystStats: React.FC = () => {
                 : "bg-backersLightBg text-backersLightText"
             }`}
           >
-            <p className="uppercase font-semibold text-[32px] mb-[60px] md:mb-[132px]">
+            <p className="uppercase font-semibold text-[32px] mb-[60px] md:mb-[132px] font-walsheim">
               World-Class Backers
             </p>
-            <ul className="space-y-1 text-lg uppercase dark:text-gray text-black">
+            <ul className="space-y-1 text-lg uppercase dark:text-gray text-black font-walsheim">
               {backers.map((backer: string, index: number) => (
                 <li key={index}>{backer}</li>
               ))}
