@@ -62,7 +62,7 @@ const DeveloperHub: React.FC = () => {
       />
 
       <div className="">
-        <div className="text-center z-10 md:w-[55%] flex flex-col items-start justify-start p-6 pt-0">
+        <div className="text-center z-10 md:w-[60%] flex flex-col items-start md:items-center justify-start p-6 pt-0">
           <h1 className="text-4xl md:text-[72px] font-medium mb-6 text-[#323131] font-sans">
             {title}
           </h1>
