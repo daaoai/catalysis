@@ -38,8 +38,8 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="relative md:hidden w-full h-screen flex flex-col gap-4 font-walsheim bg-[#D5E5FF] pt-4 overflow-hidden">
-        <div className="flex items-center justify-end h-full px-8 md:px-16 mt-8 md:mt-0">
+      <div className="relative md:hidden w-full h-[130vh] md:h-screen  flex flex-col gap-4 font-walsheim bg-[#D5E5FF] pt-4 overflow-hidden">
+        <div className="flex items-center justify-end h-full px-8 md:px-16 mt-16 md:mt-0">
           <div className="lg:max-w-4xl text-right flex flex-col items-center justify-end">
             <h1 className="text-[40px] font-medium md:text-6xl leading-tight text-center font-walsheim">
               {heroContent.title[0]} <br /> {heroContent.title[1]}
