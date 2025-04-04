@@ -43,7 +43,7 @@ const BlogsSection: React.FC = () => {
               >
                 {blog.title}
               </p>
-              <p className="text-[16px] line-clamp-3 font-walsheim">
+              <p className="text-[16px] line-clamp-3 font-walsheim  text-[#383737] font-normal">
                 {blog.desc}
               </p>
             </div>

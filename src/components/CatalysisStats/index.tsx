@@ -35,7 +35,7 @@ const CatalystStats: React.FC = () => {
               className="w-full h-auto rounded-lg"
             />
             <div className="absolute top-0 md:top-20 lg:top-28 left-0 w-full h-full p-4 md:p-6 z-10 flex flex-col rounded-lg gap-y-2">
-              <p className="text-xs dark:text-white-50 text-black-10 uppercase px-3 font-generalsans">
+              <p className="text-lg dark:text-white-50 text-black-10 uppercase px-3 font-generalsans font-normal">
                 {firstCard.title}
               </p>
               <h3
@@ -60,7 +60,7 @@ const CatalystStats: React.FC = () => {
               className="w-full h-auto rounded-lg"
             />
             <div className="absolute top-0 left-0 w-full h-full p-4 md:p-6 z-10 flex flex-col rounded-lg gap-y-2">
-              <p className="text-xs dark:text-white-50 text-black-10 uppercase px-3 font-generalsans">
+              <p className="text-lg dark:text-white-50 text-black-10 uppercase px-3 font-normal font-generalsans">
                 {secondCard.title}
               </p>
               <h3
@@ -106,10 +106,10 @@ const CatalystStats: React.FC = () => {
                 : "bg-backersLightBg text-backersLightText"
             }`}
           >
-            <p className="uppercase font-semibold text-[32px] mb-[60px] md:mb-[132px] font-walsheim">
+            <p className="uppercase font-bold text-[32px] mb-[60px] md:mb-[132px] font-sans">
               World-Class Backers
             </p>
-            <ul className="space-y-1 text-lg uppercase dark:text-gray text-black font-walsheim">
+            <ul className="space-y-1 uppercase dark:text-gray text-base text-black font-normal font-generalsans">
               {backers.map((backer: string, index: number) => (
                 <li key={index}>{backer}</li>
               ))}

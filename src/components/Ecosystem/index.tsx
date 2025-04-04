@@ -31,7 +31,7 @@ const PartnerShowcase: React.FC = () => {
         <h1 className="text-3xl md:text-5xl text-[#323131] font-bold font-satoshi">
           {partnerShowcaseContent.headerTitle}
         </h1>
-        <p className="mt-4 text-[#383737] dark:text-partnerHeaderDark text-[18px] font-normal font-generalsans">
+        <p className="mt-4 text-[#383737] dark:text-partnerHeaderDark text-[12px] font-normal font-generalsans">
           {partnerShowcaseContent.headerSubtitle}
         </p>
       </div>

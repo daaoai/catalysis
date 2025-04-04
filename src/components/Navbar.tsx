@@ -81,9 +81,6 @@ const Navbar: React.FC = () => {
             alt={`${navbarContent.title} Logo`}
             className="h-6"
           />
-          <span className="text-2xl font-medium justify-center dark:text-white text-black-20 items-center">
-            {navbarContent.title}
-          </span>
         </div>
 
         {/* Hamburger Icon */}
