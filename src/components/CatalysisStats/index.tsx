@@ -15,11 +15,11 @@ const CatalystStats: React.FC = () => {
 
   return (
     <div className="px-6 md:px-20 bg-white">
-      <div className="mb-12">
+      <div className="mb-12 max-w-sm">
         <h2 className="text-3xl md:text-[40px] mb-4 mt-10 font-walsheim">
           {pageHeading.title}
         </h2>
-        <p className="dark:text-gray text-black max-w-md text-md font-walsheim">
+        <p className="dark:text-gray text-[#383737] max-w-md text-sm font-normal font-generalsans">
           {pageHeading.subtitle}
         </p>
       </div>
@@ -76,7 +76,7 @@ const CatalystStats: React.FC = () => {
           </div>
 
           {/* Third Card */}
-          <div className="relative w-full md:-mt-16">
+          <div className="relative w-full md:-mt-28">
             <img
               src={theme === "dark" ? thirdCard.img.dark : thirdCard.img.light}
               alt={thirdCard.title}
