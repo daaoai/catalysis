@@ -53,9 +53,6 @@ const Navbar: React.FC = () => {
             alt={`${navbarContent.title} Logo`}
             className="h-6"
           />
-          <span className="text-2xl font-normal font-generalsans justify-center dark:text-white text-black-20 items-center">
-            {navbarContent.title}
-          </span>
         </div>
 
         <div className="flex space-x-8 dark:text-gray text-black text-lg">
