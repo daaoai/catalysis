@@ -37,12 +37,12 @@ const BlogsSection: React.FC = () => {
               className="p-4 flex-1"
               style={{ backgroundColor: blog.bgColor }}
             >
-              <h3
-                className="text-[28px] mb-2 line-clamp-2 font-walsheim"
+              <p
+                className="text-2xl mb-2 font-walsheim"
                 style={{ color: blog.textColor }}
               >
                 {blog.title}
-              </h3>
+              </p>
               <p className="text-[16px] line-clamp-3 font-walsheim">
                 {blog.desc}
               </p>

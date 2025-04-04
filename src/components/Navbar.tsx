@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 md:w-1/2 bg-[rgba(239,239,239,0.75)] dark:bg-[rgba(28,28,26,0.75)] backdrop-blur-md backdrop-saturate-150 text-white px-10 py-4 rounded-full items-center justify-between z-50">
+    <nav className="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 md:w-1/2 bg-[#C5C6C8] dark:bg-[rgba(28,28,26,0.75)] backdrop-blur-md backdrop-saturate-150 text-white px-10 py-4 rounded-full items-center justify-between z-50">
       {/* Logo and Title Section */}
       <div
         className="flex items-center space-x-2 cursor-pointer"
@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
               key={idx}
               href={link.href}
               onClick={(e) => handleScroll(e, sectionId)}
-              className="hover:text-black transition"
+              className="hover:text-black transition font-helvetica text-[#383737]"
             >
               {link.label}
             </a>

@@ -19,7 +19,7 @@ const Roadmap: React.FC = () => {
 
   return (
     <section
-      className="relative bg-cover bg-center bg-no-repeat min-h-screen px-8 py-16 font-walsheim"
+      className="relative bg-cover bg-center bg-no-repeat min-h-screen px-8 py-16"
       style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
       <div className="max-w-5xl mx-auto">
@@ -35,7 +35,7 @@ const Roadmap: React.FC = () => {
               className="flex ml-0 md:ml-[${idx * 18}rem] items-center w-full max-w-[574px] p-4 rounded-xl bg-roadmapItemLight dark:bg-roadmapItemDark backdrop-blur-xl"
               style={{ marginLeft: `${idx * 18}rem` }}
             >
-              <div className="w-[100px] h-[106px] font-bold text-center px-4 py-2 rounded mr-6 font-walsheim bg-roadmapBoxLight text-roadmapBoxLightText dark:bg-roadmapBoxDark dark:text-roadmapBoxDarkText">
+              <div className="w-[100px] h-[106px] font-bold text-center px-4 py-2 rounded mr-6 bg-roadmapBoxLight text-roadmapBoxLightText dark:bg-roadmapBoxDark dark:text-roadmapBoxDarkText">
                 <div className="text-2xl md:text-[40px] leading-none">
                   {item.quarter}
                 </div>

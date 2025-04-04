@@ -11,6 +11,7 @@ import CatalystStats from "@/components/CatalysisStats";
 import Roadmap from "@/components/Roadmap";
 import useTheme from "@/hooks/useTheme";
 import Footer from "@/components/Footer";
+import Partners from "@/components/Hero/Partners";
 
 export default function Home() {
   const {
@@ -44,6 +45,7 @@ export default function Home() {
       <div id="ecosystem">
         <PartnerShowcase />
       </div>
+      <Partners />
       <div id="roadmap">
         <Roadmap />
       </div>

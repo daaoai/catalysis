@@ -15,14 +15,14 @@ const FeaturesSection: React.FC = () => {
     <section className="px-6 md:px-20 bg-white">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
         <div className="max-w-xl">
-          <h2 className="text-4xl font-semibold mb-4 font-walsheim">
+          <h2 className="text-4xl font-normal mb-4 font-sans">
             {featurePageContent.title}
           </h2>
           <p className="text-black dark:text-gray-300 font-walsheim">
             {featurePageContent.description}
           </p>
         </div>
-        <button className="mt-6 font-walsheim md:mt-0 dark:bg-white dark:text-black text-white bg-black rounded-full px-6 py-2 transition">
+        <button className="mt-6 font-sans md:mt-0 dark:bg-white dark:text-black text-white bg-black rounded-full px-6 py-2 transition">
           {featurePageContent.button}
         </button>
       </div>
@@ -39,10 +39,10 @@ const FeaturesSection: React.FC = () => {
             {index === 0 || index === 3 ? (
               <>
                 <div className="px-8 py-4 md:px-16 md:py-6">
-                  <h3 className="text-lg font-semibold mb-3 text-black font-walsheim">
+                  <h3 className="text-2xl font-normal mb-3 text-[#323131] font-walsheim">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-black dark:text-featuresAnswerDark font-walsheim">
+                  <p className="text-sm font-normal text-[#383737] dark:text-featuresAnswerDark font-sans">
                     {feature.description}
                   </p>
                 </div>

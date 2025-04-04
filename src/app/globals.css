@@ -1,14 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satoshi:wght@400;600&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Walsheim';
-    src: url('/fonts/GT-Walsheim-Pro-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: "Walsheim";
+  src: url("/fonts/GT-Walsheim-Pro-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 
-  .font-walsheim {
-    font-family: 'Walsheim', sans-serif;
-  }
+.font-walsheim {
+  font-family: "Walsheim", sans-serif;
+}

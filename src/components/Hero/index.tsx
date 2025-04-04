@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import useTheme from "@/hooks/useTheme";
 import { heroContent } from "@/content/Hero";
 import { BG_IMAGES, BG_IMAGES_DARK } from "@/content/Images";
-import Partners from "./Partners";
 import Image from "next/image";
 
 const HeroSection: React.FC = () => {
@@ -27,10 +26,10 @@ const HeroSection: React.FC = () => {
         {/* Main Content */}
         <div className="flex items-center justify-end h-full px-8 md:px-16 w-full">
           <div className="lg:max-w-4xl text-right flex flex-col items-start justify-start">
-            <h1 className="text-5xl md:text-6xl leading-tight text-start text-black font-walsheim">
+            <h1 className="text-5xl md:text-6xl leading-tight text-start text-[#363636] font-normal font-walsheim">
               {heroContent.title[0]} <br /> {heroContent.title[1]}
             </h1>
-            <p className="mt-6 text-base md:text-lg dark:text-gray text-black max-w-xl text-start font-walsheim">
+            <p className="mt-6 text-base md:text-lg dark:text-gray text-black max-w-xl text-start font-helvetica">
               {heroContent.subtitle}
             </p>
             <button className="mt-10 px-6 py-3 font-walsheim bg-black text-white dark:bg-white dark:text-black rounded-full font-medium transition">
@@ -49,7 +48,7 @@ const HeroSection: React.FC = () => {
               {heroContent.subtitle}
             </p>
             <div>
-              <button className="mt-10 px-6 py-3 bg-black font-walsheim text-white dark:bg-white dark:text-black rounded-full font-medium transition">
+              <button className="mt-10 px-6 py-3 bg-black font-walsheim text-white dark:bg-white text-2xl font-walsheim dark:text-black rounded-full font-medium transition">
                 {heroContent.buttonText}
               </button>
             </div>
@@ -63,7 +62,6 @@ const HeroSection: React.FC = () => {
           className="w-full"
         />
       </div>
-      <Partners />
     </div>
   );
 };

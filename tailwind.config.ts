@@ -105,6 +105,8 @@ export default {
         metal: ['"Metal Mania"', "cursive"],
         rocker: ["New Rocker", "cursive"],
         mabry: ["Mabry Pro", "sans-serif"],
+        helvetica: ["Helvetica", "Arial", "sans-serif"],
+        sans: ["Satoshi", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
