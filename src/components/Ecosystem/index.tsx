@@ -27,7 +27,7 @@ const PartnerShowcase: React.FC = () => {
       className="h-600px md:h-[880px] bg-cover bg-center flex flex-col items-center justify-between px-4 pt-[120px] pb-[200px] font-walsheim"
       style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
-      <div className="text-center mb-10 pt-10">
+      <div className="text-center pt-10">
         <h1 className="text-3xl md:text-5xl text-black">
           {partnerShowcaseContent.headerTitle}
         </h1>
@@ -36,7 +36,7 @@ const PartnerShowcase: React.FC = () => {
         </p>
       </div>
 
-      <h2 className="text-lg md:text-3xl text-partnerNetworksLight dark:text-partnerNetworksDark font-medium mb-8">
+      <h2 className="text-lg md:text-3xl text-partnerNetworksLight dark:text-partnerNetworksDark font-medium">
         {partnerShowcaseContent.networksTitle}
       </h2>
 

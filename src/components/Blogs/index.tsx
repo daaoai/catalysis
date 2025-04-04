@@ -14,11 +14,10 @@ const BlogsSection: React.FC = () => {
             {blogsSectionContent.description}
           </p>
         </div>
-        <button className="dark:text-black text-white dark:bg-white bg-black font-semibold px-5 py-2 rounded-full shadow">
+        <button className="dark:text-black hidden md:flex text-white dark:bg-white bg-black font-semibold px-5 py-2 rounded-full shadow">
           {blogsSectionContent.buttonText}
         </button>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {blogs.map((blog, idx) => (
           <div
@@ -39,7 +38,7 @@ const BlogsSection: React.FC = () => {
               style={{ backgroundColor: blog.bgColor }}
             >
               <h3
-                className="text-[28px] mb-4 line-clamp-2"
+                className="text-[28px] mb-2 line-clamp-2"
                 style={{ color: blog.textColor }}
               >
                 {blog.title}

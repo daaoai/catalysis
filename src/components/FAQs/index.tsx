@@ -19,7 +19,7 @@ const FAQContentection: React.FC = () => {
       </div>
 
       <div>
-        <div className="flex dark:bg-faqToggleDarkBg bg-faqToggleLightBg rounded-full p-1 w-fit mb-20">
+        <div className="flex dark:bg-faqToggleDarkBg bg-faqToggleLightBg rounded-full p-1 w-fit mb-12 md:mb-20">
           {userContent.map((user: string, idx: number) => (
             <button
               key={idx}

@@ -62,11 +62,11 @@ const DeveloperHub: React.FC = () => {
       />
 
       <div className="">
-        <div className="text-center z-10 md:w-[55%]">
+        <div className="text-center z-10 md:w-[55%] flex flex-col items-start justify-start p-6 pt-0">
           <h1 className="text-4xl md:text-[72px] font-medium mb-6 text-black">
             {title}
           </h1>
-          <p className="dark:text-gray-200 text-black font-normal text-lg mb-10">
+          <p className="dark:text-gray-200 text-black font-normal text-lg mb-10 text-start">
             {description}
           </p>
           <div className="flex justify-center gap-6 flex-wrap">

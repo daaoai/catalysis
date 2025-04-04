@@ -47,10 +47,10 @@ const Footer: React.FC = () => {
             {Object.entries(FooterContent.navigation).map(
               ([section, links]) => (
                 <div key={section} className="flex flex-col space-y-4">
-                  <h3 className="text-gray-900 dark:text-gray font-medium">
+                  <h3 className="text-gray-900 dark:text-gray font-semibold">
                     {section}
                   </h3>
-                  <ul className="space-y-3">
+                  <ul className="space-y-1">
                     {links.map((link) => (
                       <li key={link.label}>
                         <Link
