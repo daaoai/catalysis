@@ -77,7 +77,6 @@ export default {
         faqAnswerDark: "#A6A6A6",
         // FeaturesSection Colors
         featuresAnswerDark: "#C3C3C3",
-
         // DeveloperHub Colors (from hex codes in DeveloperHub component)
         devPrimary: "#323131", // Used for text and button background
         devTagBackground: "#F8FFEB", // Background for arc floating tags
@@ -112,6 +111,9 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      borderWidth: {
+        thin: "1px", // Adding 1px border width
       },
     },
   },

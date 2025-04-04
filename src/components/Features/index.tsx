@@ -31,7 +31,7 @@ const FeaturesSection: React.FC = () => {
         {features.map((feature, index) => (
           <div
             key={index}
-            className={`rounded-md overflow-hidden border-[#8298AB40] border-2 ${
+            className={`rounded-md overflow-hidden border-[#8298AB40] border-thin ${
               theme === "dark" ? feature.bgColor.dark : feature.bgColor.light
             }`}
           >
