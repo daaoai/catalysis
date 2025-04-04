@@ -7,10 +7,10 @@ const BlogsSection: React.FC = () => {
     <section className="px-8">
       <div className="flex justify-between items-center mb-8">
         <div>
-          <h2 className="text-4xl font-semibold mb-4 font-walsheim">
+          <h2 className="text-4xl font-medium text-[#323131] mb-4 font-sans">
             {blogsSectionContent.heading}
           </h2>
-          <p className="max-w-xl dark:text-gray-300 font-walsheim">
+          <p className="max-w-xl dark:text-gray-300 font-walsheim text-base text-[#383737]">
             {blogsSectionContent.description}
           </p>
         </div>

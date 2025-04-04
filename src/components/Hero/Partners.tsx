@@ -7,7 +7,7 @@ const Partners: React.FC = () => {
   const PartnersSrc = theme === "dark" ? PARTNERS.DARK : PARTNERS.LIGHT;
 
   return (
-    <div className="overflow-hidden mt-16">
+    <div className="overflow-hidden mt-28 mb-12">
       <div className="flex" style={{ animation: "scroll 20s linear infinite" }}>
         <img src={PartnersSrc} alt="Catalysis Partners" className="w-auto" />
         <img src={PartnersSrc} alt="Catalysis Partners" className="w-auto" />

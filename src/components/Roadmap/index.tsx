@@ -23,8 +23,10 @@ const Roadmap: React.FC = () => {
       style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl mb-4">{roadmapSection.heading}</h2>
-        <p className="text-sm text-black-10 dark:text-gray-300 max-w-md mb-16">
+        <h2 className="text-[40px] text-[#323131] font-medium mb-4">
+          {roadmapSection.heading}
+        </h2>
+        <p className="text-sm text-[#383737] font-generalsans font-normal dark:text-gray-300 max-w-md mb-16">
           {roadmapSection.description}
         </p>
 

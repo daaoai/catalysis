@@ -10,10 +10,10 @@ const FAQContentection: React.FC = () => {
   return (
     <div className="px-8 grid grid-cols-1 md:grid-cols-2 gap-8 bg-white">
       <div>
-        <h1 className="text-4xl font-semibold mb-6 font-walsheim">
+        <h1 className="text-[40px] font-medium mb-6 font-sans">
           {faqPageContent.heading}
         </h1>
-        <p className="dark:text-gray-300 text-black max-w-md font-walsheim">
+        <p className="dark:text-gray-300 text-[#323131] font-medium max-w-md font-walsheim">
           {faqPageContent.description}
         </p>
       </div>
@@ -24,9 +24,9 @@ const FAQContentection: React.FC = () => {
             <button
               key={idx}
               onClick={() => setSelectedUser(idx)}
-              className={`px-5 py-2 rounded-full font-walsheim transition-all duration-200 text-sm font-medium ${
+              className={`px-5 py-2 rounded-full font-generalsans transition-all duration-200 text-sm  font-normal ${
                 selectedUser === idx
-                  ? "dark:bg-zinc-900 dark:text-white bg-white text-black"
+                  ? "dark:bg-zinc-900 dark:text-white bg-white text-[#3A3A3A]"
                   : "dark:text-faqNonSelectedDark text-black-20"
               }`}
             >
