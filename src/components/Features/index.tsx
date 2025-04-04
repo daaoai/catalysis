@@ -62,7 +62,7 @@ const FeaturesSection: React.FC = () => {
       // Text above, image below.
       return (
         <div key={globalIndex} style={style} className={containerClasses}>
-          <div className="px-8 py-4 md:px-16 md:py-6">
+          <div className="px-8 py-4 md:py-6">
             <h3 className="text-2xl font-normal mb-3 text-[#323131] font-walsheim">
               {feature.title}
             </h3>
@@ -93,11 +93,11 @@ const FeaturesSection: React.FC = () => {
               className={imageClass}
             />
           </div>
-          <div className="px-8 py-4 md:px-16 md:py-6">
-            <h3 className="text-lg font-semibold mb-3 text-black font-walsheim">
+          <div className="px-8 py-4 md:py-6">
+            <h3 className="text-lg font-normal mb-3 text-black font-walsheim">
               {feature.title}
             </h3>
-            <p className="text-sm text-black dark:text-featuresAnswerDark font-walsheim">
+            <p className="text-sm text-black dark:text-featuresAnswerDark font-normal font-generalsans">
               {feature.description}
             </p>
           </div>
@@ -123,7 +123,7 @@ const FeaturesSection: React.FC = () => {
             {featurePageContent.description}
           </p>
         </div>
-        <button className="mt-6 font-sans md:mt-0 dark:bg-white font-medium dark:text-black text-white bg-black rounded-full px-6 py-4 transition">
+        <button className="mt-6 font-sans md:mt-0 dark:bg-white font-medium dark:text-black text-white bg-black rounded-full px-6 py-3 transition">
           {featurePageContent.button}
         </button>
       </div>

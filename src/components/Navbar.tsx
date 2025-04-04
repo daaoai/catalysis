@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
 
   // Use dark mode logo if theme is "dark"
   const logoSrc =
-    theme === "dark" ? navbarContent.logoSrc : navbarContent.darkLogoSrc;
+    theme === "dark" ? navbarContent.logoSrc : navbarContent.logoSrc;
 
   // Scroll handler for navbar links
   const handleScroll = (
