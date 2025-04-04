@@ -7,7 +7,7 @@ const Partners: React.FC = () => {
   const PartnersSrc = theme === "dark" ? PARTNERS.DARK : PARTNERS.LIGHT;
 
   return (
-    <div className="overflow-hidden mt-28 mb-12">
+    <div className="hidden md:flex overflow-hidden mt-28 mb-12">
       <div
         className="flex gap-10"
         style={{ animation: "scroll 20s linear infinite" }}

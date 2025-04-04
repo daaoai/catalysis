@@ -46,6 +46,7 @@ export default function Home() {
         <div id="ecosystem">
           <PartnerShowcase />
         </div>
+
         <Partners />
         <div id="roadmap">
           <Roadmap />
