@@ -76,7 +76,7 @@ const CatalystStats: React.FC = () => {
           </div>
 
           {/* Third Card */}
-          <div className="relative w-full md:-mt-28">
+          <div className="relative w-full md:-mt-28 md:h-[29rem]">
             <img
               src={theme === "dark" ? thirdCard.img.dark : thirdCard.img.light}
               alt={thirdCard.title}
@@ -102,9 +102,10 @@ const CatalystStats: React.FC = () => {
           <div
             className={`rounded-lg p-5 md:p-6 md:w-4/5 flex flex-col ${
               theme === "dark"
-                ? "bg-backersDarkBg text-backersDarkText"
-                : "bg-backersLightBg text-backersLightText"
+                ? "bg-backersDarkBg text-backersDarkText rounded-lg"
+                : "bg-backersLightBg text-backersLightText rounded-lg"
             }`}
+            style={{ borderRadius: "12px" }}
           >
             <p className="uppercase font-bold text-[32px] mb-[60px] md:mb-[132px] font-sans">
               World-Class Backers
