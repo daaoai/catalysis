@@ -63,23 +63,22 @@ const DeveloperHub: React.FC = () => {
 
       <div className="">
         <div className="text-center z-10 md:w-[55%] flex flex-col items-start justify-start p-6 pt-0">
-          <h1 className="text-4xl md:text-[72px] font-medium mb-6 text-black font-walsheim">
+          <h1 className="text-4xl md:text-[72px] font-medium mb-6 text-[#323131] font-sans">
             {title}
           </h1>
-          <p className="dark:text-gray-200 text-black font-normal text-lg mb-10 text-start font-walsheim">
+          <p className="dark:text-gray-200 text-[#383737] font-normal text-base mb-10 text-start font-generalsans">
             {description}
           </p>
           <div className="flex justify-center gap-6 flex-wrap">
-            <button className="dark:bg-white bg-[#323131] font-walsheim text-white dark:text-black px-6 py-3 rounded-full font-medium transition">
+            <button className="dark:bg-white bg-[#323131] text-2xl font-sans text-white dark:text-black px-6 py-3 rounded-full font-medium transition">
               {buttonStart}
             </button>
-            <button className="border border-[#323131] font-walsheim text-black dark:border-white px-6 py-3 rounded-full font-medium  dark:hover:text-black transition">
+            <button className="border border-[#323131] text-2xl font-sans text-black dark:border-white px-6 py-3 rounded-full font-medium  dark:hover:text-black transition">
               {buttonDocs}
             </button>
           </div>
         </div>
       </div>
-
       {/* Arc Floating Tags with Increased Vertical Spacing */}
       <div className="hidden md:block">
         {tags.map((tag, index) => {

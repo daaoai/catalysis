@@ -39,7 +39,7 @@ const FAQContentection: React.FC = () => {
           {faqContent.map((faq, index: number) => (
             <div key={index}>
               <button
-                className="w-full text-left font-walsheim flex justify-between items-center text-[20px] font-normal dark:text-faqQuestionDark"
+                className="w-full text-left font-generalsans text-[#323131] flex justify-between items-center text-[20px] font-normal dark:text-faqQuestionDark"
                 onClick={() =>
                   setOpenQuestion(openQuestion === index ? null : index)
                 }
@@ -57,7 +57,7 @@ const FAQContentection: React.FC = () => {
                 }`}
               >
                 {openQuestion === index && faq.answer && (
-                  <p className="mt-2 dark:text-faqAnswerDark text-black text-sm max-w-lg font-walsheim">
+                  <p className="mt-2 dark:text-faqAnswerDark text-[#323131] max-w-lg font-generalsans text-base">
                     {faq.answer}
                   </p>
                 )}
