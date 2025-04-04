@@ -5,6 +5,9 @@ import { ThemeEnum } from "@/types/theme";
 import { BG_IMAGES, BG_IMAGES_DARK } from "@/content/Images";
 
 const MOBILE_BREAKPOINT = 768;
+const CARD_WIDTH = 255.12; // Card width in px (as defined in the mobile view)
+const RIGHT_OFFSET = 32; // Right offset in px (corresponding to 2rem)
+const mobileOffsetMultiplier = 1.1 * 2 * 16; // offset per card (1.1 * mobileOffset * 16)
 
 const Roadmap: React.FC = () => {
   const { theme } = useTheme();
@@ -32,16 +35,28 @@ const Roadmap: React.FC = () => {
         : BG_IMAGES.ROADMAP;
 
   const desktopOffset = 18;
-  const mobileOffset = 2;
+
+  // For mobile, we want to align the bottom card’s right edge with the background’s right edge.
+  // We'll compute a reversed index so that the last (bottommost) card gets:
+  // marginLeft = window.innerWidth - RIGHT_OFFSET - CARD_WIDTH
+  const getMobileMarginLeft = (idx: number) => {
+    const totalCards = roadmapItems.length;
+    const reversedIndex = totalCards - 1 - idx;
+    const maxMargin = window.innerWidth - (CARD_WIDTH + RIGHT_OFFSET);
+    // Calculate margin left for each card, ensuring it doesn't go below 0.
+    const margin = Math.max(
+      maxMargin - reversedIndex * mobileOffsetMultiplier,
+      0
+    );
+    return `${margin}px`;
+  };
 
   return (
     <section
-      className={`relative bg-cover bg-center bg-no-repeat min-h-screen md:px-8 py-16 ${
-        isMobile ? "flex flex-col justify-center" : ""
-      }`}
+      className={`relative bg-cover bg-center bg-no-repeat min-h-screen md:px-8 py-16 ${isMobile ? "flex flex-col justify-center" : ""}`}
       style={!isMobile ? { backgroundImage: `url('${backgroundImage}')` } : {}}
     >
-      <div className="max-w-5xl mx-auto md:pl-0 pl-2">
+      <div className="max-w-5xl w-[100vw] mx-auto md:pl-0 pl-2">
         <h2 className="text-[40px] text-[#323131] font-medium mb-4 ">
           {roadmapSection.heading}
         </h2>
@@ -77,15 +92,15 @@ const Roadmap: React.FC = () => {
           ))}
         </div>
 
-        <div className="block md:hidden max-w-[100vw] overflow-hidden">
+        {/* Mobile view */}
+        <div className="block md:hidden w-full overflow-hidden">
           <div
             className="space-y-20 pr-8 bg-cover bg-no-repeat pt-12"
             style={{
               backgroundImage: `url('${backgroundImage}')`,
-              backgroundPosition: "right center",
+              // Shift the background left by subtracting padding (2rem) from 100% on the X-axis.
+              backgroundPosition: "calc(100% - 2rem) center",
               backgroundSize: "cover",
-              width: "100%",
-              maxWidth: "100vw",
             }}
           >
             {roadmapItems.map((item, idx) => (
@@ -93,7 +108,7 @@ const Roadmap: React.FC = () => {
                 key={idx}
                 className="font-generalsans flex items-center w-[255.12px] p-4 rounded-[7.28px] h-[82px] bg-roadmapItemLight dark:bg-roadmapItemDark backdrop-blur-xl"
                 style={{
-                  marginLeft: `${Math.min(idx * 1.1 * mobileOffset, window.innerWidth - 280)}rem`,
+                  marginLeft: getMobileMarginLeft(idx),
                 }}
               >
                 <div className="w-[60px] md:w-[100px] h-[63px] md:h-[106px] font-bold text-center px-4 py-2 rounded mr-6 bg-roadmapBoxLight text-roadmapBoxLightText dark:bg-roadmapBoxDark dark:text-roadmapBoxDarkText">
