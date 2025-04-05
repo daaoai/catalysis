@@ -33,7 +33,7 @@ const HeroSection: React.FC = () => {
         {/* Right side: Content */}
         <div className="w-[55%] h-full flex items-center justify-start px-8 md:pl-24 ">
           <div className="lg:max-w-4xl text-right flex flex-col items-start justify-start md:gap-y-8">
-            <h1 className="text-5xl md:text-[56px] leading-tight text-start text-[#1C1C1A] font-normal tracking-tighter">
+            <h1 className="text-5xl md:text-[56px] leading-tight font-sans text-start text-[#1C1C1A] font-medium tracking-tighter">
               {heroContent.title[0]} <br /> {heroContent.title[1]}
             </h1>
             <p className="text-base md:text-[16px] dark:text-gray text-[#363636] max-w-[513px] font-normal text-start font-generalsans leading-[112%]">
