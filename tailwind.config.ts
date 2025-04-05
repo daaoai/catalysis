@@ -116,6 +116,9 @@ export default {
       borderWidth: {
         thin: "1px", // Adding 1px border width
       },
+      letterSpacing: {
+        "-4": "-4", // Custom negative letter-spacing
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

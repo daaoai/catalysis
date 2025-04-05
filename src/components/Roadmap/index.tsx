@@ -57,10 +57,10 @@ const Roadmap: React.FC = () => {
       style={!isMobile ? { backgroundImage: `url('${backgroundImage}')` } : {}}
     >
       <div className="max-w-[76rem] w-[100vw] mx-auto md:pl-0 pl-2">
-        <h2 className="text-[40px] text-[#323131] font-medium mb-4 ">
+        <h2 className="text-[40px] tracking-tight text-[#323131] font-medium mb-4 font-sans">
           {roadmapSection.heading}
         </h2>
-        <p className="text-sm text-[#383737] font-generalsans font-normal dark:text-gray-300 max-w-md mb-28">
+        <p className="text-base text-[#383737] font-generalsans font-normal dark:text-gray-300 max-w-md mb-28">
           {roadmapSection.description}
         </p>
 
@@ -81,10 +81,10 @@ const Roadmap: React.FC = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-2xl dark:text-white text-roadmapBoxLight font-walsheim font-semibold mb-2">
+                <h3 className="text-[28px] dark:text-white text-roadmapBoxLight font-walsheim font-medium mb-2 tracking-tight">
                   {item.title}
                 </h3>
-                <p className="text-sm dark:text-gray text-black-10 font-walsheim">
+                <p className="text-base dark:text-gray text-black-10 font-normal font-generalsans">
                   {item.description}
                 </p>
               </div>

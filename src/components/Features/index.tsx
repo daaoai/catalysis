@@ -70,7 +70,7 @@ const FeaturesSection: React.FC = () => {
       return (
         <div key={globalIndex} style={style} className={containerClasses}>
           <div className="px-8 py-4 md:px-16 md:py-6">
-            <h3 className="text-2xl font-normal mb-3 text-[#323131] font-walsheim">
+            <h3 className="text-2xl font-normal mb-3 text-[#323131] font-walsheim tracking-tight">
               {feature.title}
             </h3>
             <p
@@ -105,11 +105,11 @@ const FeaturesSection: React.FC = () => {
             />
           </div>
           <div className="px-8 py-4 md:px-16 md:py-6">
-            <h3 className="text-2xl font-normal mb-3 text-[#323131] font-walsheim">
+            <h3 className="text-2xl font-normal mb-3 text-[#323131] font-walsheim tracking-tight">
               {feature.title}
             </h3>
             <p
-              className={`text-sm text-black-10 leading-[112%] dark:text-featuresAnswerDark font-walsheim ${
+              className={`text-sm text-black-10 leading-[112%] dark:text-featuresAnswerDark font-generalsans ${
                 globalIndex === 0 || globalIndex === 2 ? "leading-relaxed" : ""
               }`}
             >
@@ -128,13 +128,13 @@ const FeaturesSection: React.FC = () => {
   const col2Features = [features[1], features[3]];
 
   return (
-    <section className="px-6 md:px-20 bg-white">
+    <section className="px-6 md:px-20 bg-white mx-auto max-w-[90rem]">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-24">
         <div className="max-w-[400px]">
-          <h2 className="text-[40px] font-normal mb-6 font-sans">
+          <h2 className="text-[40px] font-medium mb-6 font-sans tracking-tight">
             {featurePageContent.title}
           </h2>
-          <p className="text-[#383737] dark:text-gray-300 font-normal font-generalsans leading-[112%]">
+          <p className="text-[#383737] dark:text-gray-300 text-base font-normal font-generalsans leading-[112%]">
             {featurePageContent.description}
           </p>
         </div>

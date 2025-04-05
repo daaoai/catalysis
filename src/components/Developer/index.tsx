@@ -87,7 +87,7 @@ const DeveloperHub: React.FC = () => {
 
       <div>
         <div className="text-center z-10 md:w-[60%] flex flex-col items-start md:items-center justify-start p-6 pt-0">
-          <h1 className="text-4xl md:text-[72px] font-medium md:mb-6 text-[#323131] font-sans">
+          <h1 className="text-4xl md:text-[72px] font-medium md:mb-6 text-[#323131] font-sans tracking-tighter">
             {title}
           </h1>
           <p className="dark:text-gray-200 mt-6 text-[#383737] font-normal text-base mb-12 my-6 text-start md:text-center font-generalsans">

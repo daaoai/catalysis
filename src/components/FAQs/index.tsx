@@ -8,12 +8,12 @@ const FAQContentection: React.FC = () => {
   const [openQuestion, setOpenQuestion] = useState<number | null>(0);
 
   return (
-    <div className="px-8 grid grid-cols-1 md:grid-cols-2 gap-8 bg-white">
+    <div className="mx-auto max-w-[90rem] px-8 grid grid-cols-1 md:grid-cols-2 gap-8 bg-white">
       <div>
-        <h1 className="text-[40px] font-medium mb-6 font-sans">
+        <h1 className="text-[40px] font-medium mb-6 font-sans tracking-tight text-[#323131]">
           {faqPageContent.heading}
         </h1>
-        <p className="dark:text-gray-300 text-[#323131] font-medium max-w-md font-walsheim">
+        <p className="dark:text-gray-300 text-[#383737] font-normal text-base max-w-md font-generalsans">
           {faqPageContent.description}
         </p>
       </div>
@@ -44,7 +44,7 @@ const FAQContentection: React.FC = () => {
                   setOpenQuestion(openQuestion === index ? null : index)
                 }
               >
-                <p className="font-generalsans text-[#323131] text-[20px] font-normal">
+                <p className="font-generalsans text-[#3A3A3A] text-[24px] tracking-tight  font-normal">
                   {faq.question}
                 </p>
                 <div>
@@ -61,7 +61,7 @@ const FAQContentection: React.FC = () => {
                 }`}
               >
                 {openQuestion === index && faq.answer && (
-                  <p className="mt-2 dark:text-faqAnswerDark text-[#323131] max-w-lg font-generalsans text-base">
+                  <p className="mt-2 dark:text-faqAnswerDark text-[#8D8D8D] max-w-lg font-normal font-generalsans text-base">
                     {faq.answer}
                   </p>
                 )}

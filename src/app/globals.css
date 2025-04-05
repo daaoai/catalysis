@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Satoshi:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=General+Sans:wght@400;500;700&display=swap");
-@import url('https://your-cdn-link-to-gt-walsheim-pro.css');
+@import url("https://your-cdn-link-to-gt-walsheim-pro.css");
 
 @tailwind base;
 @tailwind components;
@@ -17,6 +17,11 @@
 .font-walsheim {
   font-family: "Walsheim", sans-serif;
 }
+
+.custom-tracking {
+  letter-spacing: -4%;
+}
+
 
 @keyframes sweepOutLeft {
   0% {
