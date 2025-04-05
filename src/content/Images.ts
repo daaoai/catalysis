@@ -90,3 +90,8 @@ export const ECOSYSTEM_FOOTER = {
   LIGHT: "/ecosystem_footer.svg",
   DARK: "/ecosystem_footer_dark.svg",
 };
+
+// export const CATALYSIS_TEXT = {
+//   LIGHT: "/catalysis_text.svg",
+//   DARK: "/catalysis_text.svg",
+// };

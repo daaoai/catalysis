@@ -74,7 +74,7 @@ const FeaturesSection: React.FC = () => {
               {feature.title}
             </h3>
             <p
-              className={`text-sm font-normal text-[#383737] dark:text-featuresAnswerDark font-sans ${
+              className={`text-sm font-normal text-[#383737] dark:text-featuresAnswerDark font-generalsans  ${
                 globalIndex === 0 ? "leading-relaxed" : ""
               }`}
             >
@@ -109,7 +109,7 @@ const FeaturesSection: React.FC = () => {
               {feature.title}
             </h3>
             <p
-              className={`text-sm text-black dark:text-featuresAnswerDark font-walsheim ${
+              className={`text-sm text-black-10 leading-[112%] dark:text-featuresAnswerDark font-walsheim ${
                 globalIndex === 0 || globalIndex === 2 ? "leading-relaxed" : ""
               }`}
             >
@@ -130,15 +130,15 @@ const FeaturesSection: React.FC = () => {
   return (
     <section className="px-6 md:px-20 bg-white">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-24">
-        <div className="max-w-sm">
-          <h2 className="text-4xl font-normal mb-4 font-sans">
+        <div className="max-w-[400px]">
+          <h2 className="text-[40px] font-normal mb-6 font-sans">
             {featurePageContent.title}
           </h2>
-          <p className="text-[#383737] dark:text-gray-300 font-normal font-generalsans">
+          <p className="text-[#383737] dark:text-gray-300 font-normal font-generalsans leading-[112%]">
             {featurePageContent.description}
           </p>
         </div>
-        <button className="mt-6 font-sans md:mt-0 text-xs md:text-[20px] dark:bg-white font-medium dark:text-black text-white bg-black rounded-full px-6 py-4 transition">
+        <button className="mt-20 font-sans md:mt-0 text-xs md:text-[20px] dark:bg-white font-medium dark:text-black text-white bg-black rounded-full px-6 py-5 transition">
           {featurePageContent.button}
         </button>
       </div>
