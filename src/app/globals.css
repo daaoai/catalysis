@@ -22,14 +22,13 @@
   letter-spacing: -4%;
 }
 
-
 @keyframes sweepOutLeft {
   0% {
     opacity: 1;
     transform: translateX(0);
   }
-  40% {
-    opacity: 1;
+  30% {
+    opacity: 0.8;
   }
   100% {
     opacity: 0;
@@ -42,8 +41,8 @@
     opacity: 0;
     transform: translateX(100vw);
   }
-  60% {
-    opacity: 1;
+  70% {
+    opacity: 0.8;
   }
   100% {
     opacity: 1;
@@ -56,8 +55,8 @@
     opacity: 1;
     transform: translateX(0);
   }
-  40% {
-    opacity: 1;
+  30% {
+    opacity: 0.8;
   }
   100% {
     opacity: 0;
@@ -70,8 +69,8 @@
     opacity: 0;
     transform: translateX(-100vw);
   }
-  60% {
-    opacity: 1;
+  70% {
+    opacity: 0.8;
   }
   100% {
     opacity: 1;
@@ -79,23 +78,31 @@
   }
 }
 
-/* Use a smoother custom easing function and slightly longer duration */
+/* Smooth animations with optimized settings */
 .sweep-out-left {
-  animation: sweepOutLeft 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  animation: sweepOutLeft 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   will-change: transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 .sweep-in-right {
-  animation: sweepInRight 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  animation: sweepInRight 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   will-change: transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 .sweep-out-right {
-  animation: sweepOutRight 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  animation: sweepOutRight 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   will-change: transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 .sweep-in-left {
-  animation: sweepInLeft 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  animation: sweepInLeft 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   will-change: transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
