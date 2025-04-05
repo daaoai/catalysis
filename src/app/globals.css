@@ -17,3 +17,40 @@
 .font-walsheim {
   font-family: "Walsheim", sans-serif;
 }
+
+
+@keyframes sweepOutLeft {
+  0% { opacity: 1; transform: translateX(0); }
+  100% { opacity: 0; transform: translateX(-100vw); }
+}
+
+@keyframes sweepInRight {
+  0% { opacity: 0; transform: translateX(100vw); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes sweepOutRight {
+  0% { opacity: 1; transform: translateX(0); }
+  100% { opacity: 0; transform: translateX(100vw); }
+}
+
+@keyframes sweepInLeft {
+  0% { opacity: 0; transform: translateX(-100vw); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.sweep-out-left {
+  animation: sweepOutLeft 1.2s ease-in-out forwards;
+}
+
+.sweep-in-right {
+  animation: sweepInRight 1.2s ease-in-out forwards;
+}
+
+.sweep-out-right {
+  animation: sweepOutRight 1.2s ease-in-out forwards;
+}
+
+.sweep-in-left {
+  animation: sweepInLeft 1.2s ease-in-out forwards;
+}
