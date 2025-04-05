@@ -54,8 +54,9 @@ const PartnerShowcase: React.FC = () => {
     theme === "dark" ? BG_IMAGES_DARK.ECOSYSTEM : BG_IMAGES.ECOSYSTEM;
 
   const currentContent = PartnerContent[activeTab];
-  // Define how many images go to the top row for each tab index
-  const topCounts = [2, 4, 4, 2];
+
+  // Custom top counts for each tab index (ensures a maximum of 2 rows)
+  const topCounts = [2, 3, 4, 2];
   const topCount = topCounts[activeTab] || 0;
   const topPartners = currentContent.partners.slice(0, topCount);
   const bottomPartners = currentContent.partners.slice(topCount);
@@ -83,7 +84,7 @@ const PartnerShowcase: React.FC = () => {
 
         <div className="max-w-7xl mx-auto mb-20">
           {/* Top row */}
-          <div className="flex gap-7 md:gap-16 flex-wrap w-full justify-center items-center mb-10">
+          <div className="flex gap-7 md:gap-16 flex-nowrap w-full justify-center items-center mb-10 overflow-x-auto">
             {topPartners.map((partner, index: number) => {
               const logoSrc =
                 theme === "dark"
@@ -102,7 +103,7 @@ const PartnerShowcase: React.FC = () => {
             })}
           </div>
           {/* Bottom row */}
-          <div className="flex gap-7 md:gap-16 flex-wrap w-full justify-center items-center">
+          <div className="flex gap-7 md:gap-16 flex-nowrap w-full justify-center items-center overflow-x-auto">
             {bottomPartners.map((partner, index: number) => {
               const logoSrc =
                 theme === "dark"
