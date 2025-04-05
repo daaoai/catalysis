@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import useTheme from "@/hooks/useTheme";
 import { PartnerContent } from "@/content/Partners";
@@ -16,10 +16,28 @@ const PartnerShowcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [direction, setDirection] = useState(1); // 1 for right, -1 for left
   const [isAnimating, setIsAnimating] = useState(false);
+  const [contentHeight, setContentHeight] = useState<number | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const dummyRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setMounted(true);
+    // Set mobile state based on window width (adjust breakpoint if needed)
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
+
+  // Measure the height of the active content using a hidden dummy container (mobile only)
+  useLayoutEffect(() => {
+    if (isMobile && dummyRef.current) {
+      setContentHeight(dummyRef.current.clientHeight);
+    }
+  }, [activeTab, isMobile, mounted]);
 
   // Auto-scroll tabs at interval
   useEffect(() => {
@@ -37,12 +55,7 @@ const PartnerShowcase: React.FC = () => {
     if (isAnimating) return; // Prevent starting new animations while one is in progress
 
     setIsAnimating(true);
-
-    if (isAuto) {
-      setDirection(1);
-    } else {
-      setDirection(newTab > activeTab ? 1 : -1);
-    }
+    setDirection(isAuto ? 1 : newTab > activeTab ? 1 : -1);
     setActiveTab(newTab);
 
     // Reset animating state after animation completes
@@ -55,7 +68,6 @@ const PartnerShowcase: React.FC = () => {
 
   const backgroundImage =
     theme === "dark" ? BG_IMAGES_DARK.ECOSYSTEM : BG_IMAGES.ECOSYSTEM;
-
   const currentContent = PartnerContent[activeTab];
 
   // Custom top counts for each tab index (ensures a maximum of 2 rows)
@@ -75,8 +87,8 @@ const PartnerShowcase: React.FC = () => {
       opacity: 1,
       transition: {
         x: {
-          type: "tween", // Using tween instead of spring for more predictable movement
-          ease: [0.25, 0.1, 0.25, 1], // Cubic bezier curve for smoother motion
+          type: "tween",
+          ease: [0.25, 0.1, 0.25, 1],
           duration: 1.5,
         },
         opacity: {
@@ -102,99 +114,133 @@ const PartnerShowcase: React.FC = () => {
     }),
   };
 
+  // This function returns the common content JSX for the active tab.
+  const renderContent = () => (
+    <>
+      {/* Header Section */}
+      <div className="text-center mt-5 mb-8 md:mb-12">
+        <h1 className="text-3xl md:text-5xl text-[#323131] dark:text-white font-bold font-satoshi mb-3 md:mb-4">
+          {currentContent.headerTitle}
+        </h1>
+        <p className="mt-2 md:mt-4 text-base md:text-lg text-[#383737] dark:text-partnerHeaderDark font-normal font-generalsans">
+          {currentContent.headerSubtitle}
+        </p>
+      </div>
+
+      {/* Networks Title */}
+      <h2 className="text-lg md:text-[32px] text-partnerNetworksLight text-center dark:text-partnerNetworksDark font-sans mb-6 md:mb-12 font-medium">
+        {currentContent.networksTitle}
+      </h2>
+
+      <div className="max-w-7xl mx-auto mb-10 md:mb-20 px-2 md:px-4">
+        {/* Top row */}
+        <div className="flex gap-3 md:gap-16 flex-nowrap w-full justify-center items-center mb-6 md:mb-10 overflow-hidden">
+          {topPartners.map((partner, index: number) => {
+            const logoSrc =
+              theme === "dark"
+                ? PARTNER_LOGOS_DARK[
+                    partner.id as keyof typeof PARTNER_LOGOS_DARK
+                  ]
+                : PARTNER_LOGOS[partner.id as keyof typeof PARTNER_LOGOS];
+            return (
+              <img
+                key={index}
+                src={logoSrc}
+                alt={partner.alt}
+                className="h-10 md:h-16 w-auto max-w-[60px] md:max-w-none object-contain transition-all duration-500"
+                style={{
+                  willChange: "transform, opacity",
+                  transform: "translateZ(0)",
+                }}
+              />
+            );
+          })}
+        </div>
+
+        {/* Bottom row */}
+        <div className="flex gap-3 md:gap-16 flex-nowrap w-full justify-center items-center overflow-hidden">
+          {bottomPartners.map((partner, index: number) => {
+            const logoSrc =
+              theme === "dark"
+                ? PARTNER_LOGOS_DARK[
+                    partner.id as keyof typeof PARTNER_LOGOS_DARK
+                  ]
+                : PARTNER_LOGOS[partner.id as keyof typeof PARTNER_LOGOS];
+            return (
+              <img
+                key={index}
+                src={logoSrc}
+                alt={partner.alt}
+                className="h-6 md:h-16 w-auto max-w-[60px] md:max-w-none object-contain transition-all duration-500"
+                style={{
+                  willChange: "transform, opacity",
+                  transform: "translateZ(0)",
+                }}
+              />
+            );
+          })}
+        </div>
+      </div>
+    </>
+  );
+
+  // Updated: use absolute positioning for animated content on both mobile and desktop
+  const animatedContentClass =
+    "w-full flex flex-col items-center h-full absolute";
+
   return (
     <div
-      className="h-full md:h-[880px] md:mt-28 bg-cover bg-center flex flex-col items-center justify-between px-4 pt-[120px] pb-[180px] md:pb-[260px] font-walsheim overflow-hidden"
+      className="h-auto md:h-[880px] md:mt-28 bg-cover bg-center flex flex-col items-center justify-between px-4 pt-[120px] pb-[180px] md:pb-[260px] font-walsheim overflow-hidden"
       style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
       <div className="relative w-full flex flex-col items-center flex-grow">
-        <AnimatePresence initial={false} custom={direction}>
-          <motion.div
-            key={activeTab}
-            custom={direction}
-            variants={slideAnimation}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            className="absolute w-full flex flex-col items-center h-full"
-            onAnimationStart={() => setIsAnimating(true)}
-            onAnimationComplete={() => setIsAnimating(false)}
+        {/* Hidden dummy container used for height measurement on mobile */}
+        {isMobile && (
+          <div
+            ref={dummyRef}
+            className="w-full"
+            style={{
+              position: "absolute",
+              top: "-9999px",
+              left: 0,
+              opacity: 0,
+              pointerEvents: "none",
+            }}
           >
-            {/* Header Section */}
-            <div className="text-center mt-5 mb-12">
-              <h1 className="text-[48px] md:text-5xl text-[#323131] dark:text-white font-bold font-satoshi mb-4">
-                {currentContent.headerTitle}
-              </h1>
-              <p className="mt-4 text-[#383737] dark:text-partnerHeaderDark text-[18px] font-normal font-generalsans">
-                {currentContent.headerSubtitle}
-              </p>
-            </div>
+            {renderContent()}
+          </div>
+        )}
 
-            {/* Networks Title */}
-            <h2 className="text-lg md:text-[32px] text-partnerNetworksLight text-center dark:text-partnerNetworksDark font-sans mb-12 font-medium">
-              {currentContent.networksTitle}
-            </h2>
-
-            <div className="max-w-7xl mx-auto mb-20">
-              {/* Top row */}
-              <div className="flex gap-7 md:gap-16 flex-nowrap w-full justify-center items-center mb-10 overflow-hidden">
-                {topPartners.map((partner, index: number) => {
-                  const logoSrc =
-                    theme === "dark"
-                      ? PARTNER_LOGOS_DARK[
-                          partner.id as keyof typeof PARTNER_LOGOS_DARK
-                        ]
-                      : PARTNER_LOGOS[partner.id as keyof typeof PARTNER_LOGOS];
-                  return (
-                    <img
-                      key={index}
-                      src={logoSrc}
-                      alt={partner.alt}
-                      className="h-8 md:h-16 object-contain transition-all duration-500"
-                      style={{
-                        willChange: "transform, opacity",
-                        transform: "translateZ(0)", // Forces GPU acceleration
-                      }}
-                    />
-                  );
-                })}
-              </div>
-
-              {/* Bottom row */}
-              <div className="flex gap-7 md:gap-16 flex-nowrap w-full justify-center items-center overflow-hidden">
-                {bottomPartners.map((partner, index: number) => {
-                  const logoSrc =
-                    theme === "dark"
-                      ? PARTNER_LOGOS_DARK[
-                          partner.id as keyof typeof PARTNER_LOGOS_DARK
-                        ]
-                      : PARTNER_LOGOS[partner.id as keyof typeof PARTNER_LOGOS];
-                  return (
-                    <img
-                      key={index}
-                      src={logoSrc}
-                      alt={partner.alt}
-                      className="h-8 md:h-16 object-contain transition-all duration-500"
-                      style={{
-                        willChange: "transform, opacity",
-                        transform: "translateZ(0)", // Forces GPU acceleration
-                      }}
-                    />
-                  );
-                })}
-              </div>
-            </div>
-          </motion.div>
-        </AnimatePresence>
+        {/* Container for animated content with fixed height on mobile */}
+        <div
+          style={
+            isMobile && contentHeight ? { height: contentHeight } : undefined
+          }
+          className="relative w-full"
+        >
+          <AnimatePresence initial={false} custom={direction}>
+            <motion.div
+              key={activeTab}
+              custom={direction}
+              variants={slideAnimation}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              className={animatedContentClass}
+              onAnimationStart={() => setIsAnimating(true)}
+              onAnimationComplete={() => setIsAnimating(false)}
+            >
+              {renderContent()}
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
 
       {/* TabFooter */}
       <TabFooter
         activeTab={activeTab}
         totalTabs={PartnerContent.length}
-        setActiveTab={(newTab: number) => {
-          handleTabChange(newTab, false);
-        }}
+        setActiveTab={(newTab: number) => handleTabChange(newTab, false)}
       />
     </div>
   );

@@ -22,16 +22,16 @@ const TabFooter: React.FC<TabFooterProps> = ({
   };
 
   return (
-    <div className="flex justify-center items-center space-x-6">
+    <div className="flex justify-center items-center space-x-2 md:space-x-6">
       {tabs.map((tab) => (
         <svg
           key={tab}
-          width="200"
+          width="100"
           height="4"
           viewBox="0 0 200 4"
           xmlns="http://www.w3.org/2000/svg"
           onClick={() => handleTabClick(tab)}
-          className="cursor-pointer transition-all duration-300 hover:opacity-80"
+          className="w-12 md:w-48 h-1 md:h-4 cursor-pointer transition-all duration-300 hover:opacity-80"
         >
           <rect
             width="200"
