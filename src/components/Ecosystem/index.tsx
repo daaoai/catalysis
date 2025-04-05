@@ -119,7 +119,7 @@ const PartnerShowcase: React.FC = () => {
     <>
       {/* Header Section */}
       <div className="text-center mt-5 mb-8 md:mb-12">
-        <h1 className="text-3xl md:text-5xl text-[#323131] dark:text-white font-bold font-satoshi mb-3 md:mb-4">
+        <h1 className="text-3xl md:text-5xl text-[#323131] dark:text-white font-bold font-sans mb-3 md:mb-4">
           {currentContent.headerTitle}
         </h1>
         <p className="mt-2 md:mt-4 text-base md:text-lg text-[#383737] dark:text-partnerHeaderDark font-normal font-generalsans">
@@ -190,7 +190,7 @@ const PartnerShowcase: React.FC = () => {
 
   return (
     <div
-      className="h-auto md:h-[880px] md:mt-28 bg-cover bg-center flex flex-col items-center justify-between px-4 pt-[120px] pb-[180px] md:pb-[260px] font-walsheim overflow-hidden"
+      className="h-auto md:h-[880px] md:mt-28 bg-cover bg-center flex flex-col items-center justify-between px-4 pt-[120px] pb-[180px] md:pb-[260px] overflow-hidden"
       style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
       <div className="relative w-full flex flex-col items-center flex-grow">

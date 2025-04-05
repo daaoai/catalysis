@@ -56,7 +56,7 @@ const HeroSection: React.FC = () => {
               {heroContent.subtitle}
             </p>
             <div>
-              <button className=" md:mb-0 px-6 py-3 mt-12 text-xs md:text-[20px] font-sans bg-black placeholder:font-walsheim text-white dark:bg-white font-walsheim dark:text-black rounded-full font-medium transition">
+              <button className=" md:mb-0 px-6 py-3 mt-12 text-xs md:text-[20px]  bg-black placeholder:font-sans text-white dark:bg-white font-sans dark:text-black rounded-full font-medium transition">
                 {heroContent.buttonText}
               </button>
             </div>

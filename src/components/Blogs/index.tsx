@@ -14,7 +14,7 @@ const BlogsSection: React.FC = () => {
             {blogsSectionContent.description}
           </p>
         </div>
-        <button className="mt-6 md:mt-10 px-6 py-3 text-xs md:text-[20px] font-sans bg-black text-white dark:bg-white dark:text-black rounded-full font-medium transition">
+        <button className="mt-6 md:mt-10 px-6 py-5 text-xs md:text-[20px] font-sans bg-black text-white dark:bg-white dark:text-black rounded-full font-medium transition">
           {blogsSectionContent.buttonText}
         </button>
       </div>

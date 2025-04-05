@@ -76,7 +76,7 @@ const FeaturesSection: React.FC = () => {
       return (
         <div key={globalIndex} style={style} className={containerClasses}>
           <div className="px-8 py-4 md:px-16 md:py-6">
-            <h3 className="text-2xl font-normal mb-3 text-[#323131] font-walsheim tracking-tight">
+            <h3 className="text-2xl font-normal mb-6 text-[#323131] font-walsheim tracking-tight">
               {feature.title}
             </h3>
             <p
