@@ -19,33 +19,32 @@ const PartnerShowcase: React.FC = () => {
     setMounted(true);
   }, []);
 
-  // Auto-scroll tabs at interval
+  // Auto-scroll tabs at interval using always right-scroll animation
   useEffect(() => {
     const scrollInterval = setInterval(() => {
       const nextTab = (activeTab + 1) % PartnerContent.length;
-      const direction: "left" | "right" =
-        activeTab < nextTab ? "right" : "left";
-      handleTabChange(nextTab, direction);
+      handleTabChange(nextTab, true);
     }, 3000);
 
     return () => clearInterval(scrollInterval);
   }, [activeTab]);
 
-  const handleTabChange = (newTab: number, direction: "left" | "right") => {
-    // Apply the sweep-out animation to header and images only
-    setAnimationClass(
-      direction === "right" ? "sweep-out-left" : "sweep-out-right",
-    );
-    setTimeout(() => {
-      setActiveTab(newTab);
-      // Apply the sweep-in animation for the new content
-      setAnimationClass(
-        direction === "right" ? "sweep-in-right" : "sweep-in-left",
-      );
+  // isAuto true => auto-scroll animation, false => no animation (manual tab change)
+  const handleTabChange = (newTab: number, isAuto: boolean) => {
+    if (isAuto) {
+      // Always use right-scroll animation on auto-scroll
+      setAnimationClass("sweep-out-left");
       setTimeout(() => {
-        setAnimationClass("");
-      }, 500); // Duration of sweep-in animation
-    }, 500); // Duration of sweep-out animation
+        setActiveTab(newTab);
+        setAnimationClass("sweep-in-right");
+        setTimeout(() => {
+          setAnimationClass("");
+        }, 500); // Duration of sweep-in animation
+      }, 500); // Duration of sweep-out animation
+    } else {
+      // Manual click: update tab immediately without animation
+      setActiveTab(newTab);
+    }
   };
 
   if (!mounted) return null;
@@ -124,14 +123,12 @@ const PartnerShowcase: React.FC = () => {
         </div>
       </div>
 
-      {/* TabFooter rendered without animation */}
+      {/* TabFooter rendered without animation on manual click */}
       <TabFooter
         activeTab={activeTab}
         totalTabs={PartnerContent.length}
         setActiveTab={(newTab: number) => {
-          const direction: "left" | "right" =
-            newTab > activeTab ? "right" : "left";
-          handleTabChange(newTab, direction);
+          handleTabChange(newTab, false);
         }}
       />
     </div>
