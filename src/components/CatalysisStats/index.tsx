@@ -14,12 +14,12 @@ const CatalystStats: React.FC = () => {
   const [firstCard, secondCard, thirdCard] = statCards;
 
   return (
-    <div className="px-6 md:px-20 bg-white">
+    <div className="px-6 md:px-20 bg-white mx-auto max-w-[90rem]">
       <div className="mb-12 max-w-sm">
-        <h2 className="max-w-[16rem] text-3xl md:text-[40px] mb-4 mt-10 font-sans font-medium text-[#323131]">
+        <h2 className="max-w-[16rem] text-3xl md:text-[40px] mb-4 mt-10 font-sans font-medium text-[#323131] tracking-tight">
           {pageHeading.title}
         </h2>
-        <p className="dark:text-gray text-[#383737] max-w-md text-sm font-normal font-generalsans">
+        <p className="dark:text-gray text-[#383737] max-w-md text-base font-normal font-generalsans">
           {pageHeading.subtitle}
         </p>
       </div>
@@ -34,7 +34,7 @@ const CatalystStats: React.FC = () => {
               alt={firstCard.title}
               className="w-full h-auto rounded-lg"
             />
-            <div className="absolute top-0 md:top-20 lg:top-24 left-0 w-full h-full p-4 md:p-6 z-10 flex flex-col rounded-lg gap-y-2">
+            <div className="absolute top-0 md:top-20 lg:top-28 left-0 w-full h-full p-4 md:p-6 z-10 flex flex-col rounded-lg gap-y-2">
               <p className="text-lg dark:text-white-50 text-black-10 uppercase px-3 font-generalsans font-normal">
                 {firstCard.title}
               </p>

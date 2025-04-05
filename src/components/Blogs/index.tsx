@@ -4,10 +4,10 @@ import { blogs, blogsSectionContent } from "../../content/Blog";
 
 const BlogsSection: React.FC = () => {
   return (
-    <section className="px-8">
+    <section className="px-8 mx-auto max-w-[90rem]">
       <div className="flex flex-col  md:flex-row justify-between items-start md:items-end mb-14">
         <div>
-          <h2 className="text-4xl font-medium text-[#323131] mb-4 font-sans">
+          <h2 className="text-[40px] tracking-tight font-medium text-[#323131] mb-4 font-sans">
             {blogsSectionContent.heading}
           </h2>
           <p className="max-w-[37rem] dark:text-gray-300 font-generalsans font-normal text-base text-[#383737]">
@@ -38,12 +38,12 @@ const BlogsSection: React.FC = () => {
               style={{ backgroundColor: blog.bgColor }}
             >
               <p
-                className="text-2xl mb-2 font-walsheim"
+                className="text-[28px] font-normal tracking-tight mb-2 font-walsheim"
                 style={{ color: blog.textColor }}
               >
                 {blog.title}
               </p>
-              <p className="text-[16px] line-clamp-3 font-walsheim  text-[#383737] font-normal">
+              <p className="text-[16px] line-clamp-3 font-generalsans  text-[#383737] font-normal">
                 {blog.desc}
               </p>
             </div>
