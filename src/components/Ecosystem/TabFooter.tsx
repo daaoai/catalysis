@@ -1,5 +1,4 @@
 import React from "react";
-import useTheme from "@/hooks/useTheme";
 
 interface TabFooterProps {
   activeTab: number;
