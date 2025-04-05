@@ -34,12 +34,12 @@ const CatalystStats: React.FC = () => {
               alt={firstCard.title}
               className="w-full h-auto rounded-lg"
             />
-            <div className="absolute top-0 md:top-20 lg:top-28 left-0 w-full h-full p-4 md:p-6 z-10 flex flex-col rounded-lg gap-y-2">
-              <p className="text-lg dark:text-white-50 text-black-10 uppercase px-3 font-generalsans font-normal">
+            <div className="absolute top-0 md:top-20 lg:top-28 left-0 w-full h-full p-4 md:p-6 z-10 flex flex-col rounded-lg gap-y-3">
+              <p className="text-lg dark:text-white-50 text-black-10 uppercase px-4 font-generalsans font-normal">
                 {firstCard.title}
               </p>
               <h3
-                className={`text-[64px] md:text-4xl lg:text-[96px] font-semibold font-sans sm:leading-[80%] sm:tracking-[-4%] md:leading-normal md:tracking-normal md:-m-4 ${
+                className={`text-[64px] px-4 md:text-4xl lg:text-[96px] font-semibold font-sans leading-[80%] sm:tracking-[-4%] md:leading-normal md:tracking-normal md:-mx-4 md:-my-8 ${
                   theme === "dark"
                     ? firstCard.textColor.dark
                     : firstCard.textColor.light
@@ -60,11 +60,11 @@ const CatalystStats: React.FC = () => {
               className="w-full h-auto rounded-lg"
             />
             <div className="absolute top-0 left-0 w-full h-full p-4 md:p-6 z-10 flex flex-col rounded-lg gap-y-2">
-              <p className="text-lg dark:text-white-50 text-black-10 uppercase px-3 font-normal font-generalsans">
+              <p className="text-lg dark:text-white-50 text-black-10 uppercase font-normal font-generalsans">
                 {secondCard.title}
               </p>
               <h3
-                className={`text-[64px] md:text-4xl text-[#B417D7] lg:text-[96px] font-semibold font-sans sm:leading-[80%] sm:tracking-[-4%] md:leading-normal md:tracking-normal md:-m-8${
+                className={`text-[64px] md:text-4xl text-[#B417D7] lg:text-[96px] font-semibold font-sans sm:leading-[80%] sm:tracking-[-4%] md:leading-normal md:tracking-normal md:-mx-2 md:-my-8 ${
                   theme === "dark"
                     ? secondCard.textColor.dark
                     : secondCard.textColor.light
@@ -83,11 +83,11 @@ const CatalystStats: React.FC = () => {
               className="w-full h-auto rounded-lg"
             />
             <div className="absolute top-0 left-0 w-full h-full p-4 md:p-6 z-10 flex flex-col rounded-lg gap-y-2">
-              <p className="text-lg dark:text-white-50 text-black-10 uppercase px-3 font-generalsans">
+              <p className="text-lg dark:text-white-50 text-black-10 uppercase font-generalsans">
                 {thirdCard.title}
               </p>
               <h3
-                className={`text-[64px] md:text-4xl lg:text-[96px] text-[#085A95] font-semibold font-sans sm:leading-[80%] sm:tracking-[-4%] md:leading-normal md:tracking-normal md:-m-8${
+                className={`text-[64px] md:text-4xl lg:text-[96px] text-[#085A95] font-semibold font-sans sm:leading-[80%] sm:tracking-[-4%] md:leading-normal md:tracking-normal md:-mx-2 md:-my-8 ${
                   theme === "dark"
                     ? thirdCard.textColor.dark
                     : thirdCard.textColor.light
