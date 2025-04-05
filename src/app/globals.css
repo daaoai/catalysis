@@ -18,39 +18,79 @@
   font-family: "Walsheim", sans-serif;
 }
 
-
 @keyframes sweepOutLeft {
-  0% { opacity: 1; transform: translateX(0); }
-  100% { opacity: 0; transform: translateX(-100vw); }
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
 }
 
 @keyframes sweepInRight {
-  0% { opacity: 0; transform: translateX(100vw); }
-  100% { opacity: 1; transform: translateX(0); }
+  0% {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes sweepOutRight {
-  0% { opacity: 1; transform: translateX(0); }
-  100% { opacity: 0; transform: translateX(100vw); }
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
 }
 
 @keyframes sweepInLeft {
-  0% { opacity: 0; transform: translateX(-100vw); }
-  100% { opacity: 1; transform: translateX(0); }
+  0% {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
+/* Use a smoother custom easing function and slightly longer duration */
 .sweep-out-left {
-  animation: sweepOutLeft 1.2s ease-in-out forwards;
+  animation: sweepOutLeft 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  will-change: transform, opacity;
 }
 
 .sweep-in-right {
-  animation: sweepInRight 1.2s ease-in-out forwards;
+  animation: sweepInRight 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  will-change: transform, opacity;
 }
 
 .sweep-out-right {
-  animation: sweepOutRight 1.2s ease-in-out forwards;
+  animation: sweepOutRight 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  will-change: transform, opacity;
 }
 
 .sweep-in-left {
-  animation: sweepInLeft 1.2s ease-in-out forwards;
+  animation: sweepInLeft 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  will-change: transform, opacity;
 }
