@@ -45,6 +45,12 @@ const FeaturesSection: React.FC = () => {
         }
       : {};
 
+    // For mobile on index 0 and 2, set height to 90% of the original height.
+    if ((globalIndex === 0 || globalIndex === 2) && window.innerWidth < 768) {
+      const originalHeight = parseInt(dimensions[globalIndex].height, 10);
+      style.height = `${Math.round(originalHeight * 0.8)}px`;
+    }
+
     // Combine container classes with dynamic background color.
     let containerClasses = `flex flex-col h-full rounded-md overflow-hidden border border-thin border-[#8298AB40] mb-8 ${
       theme === "dark" ? feature.bgColor.dark : feature.bgColor.light
