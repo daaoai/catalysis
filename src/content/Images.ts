@@ -22,6 +22,21 @@ export const PARTNER_LOGOS = {
   JPMORGANCHASE: "/logos/jpmorganchase_black.svg",
   MONETARY_AUTHORITY: "/logos/monetary-authority_black.svg",
   BANCO_CENTRAL: "/logos/banco-central_black.svg",
+  DITTO: "/logos/ditto.svg",
+  BLOCKSCAPE: "/logos/blockscape.svg",
+  COSMOSTATION: "/logos/cosmostation.svg",
+  BLOCKPI: "/logos/blockpi.svg",
+  STAKELY: "/logos/stakely.svg",
+  NODEINFRA: "/logos/nodeinfra.svg",
+  MELLOW: "/logos/mellow.svg",
+  EIGENLAYER: "/logos/eigenlayer.svg",
+  SYMBIOTIC: "/logos/symbiotic.svg",
+  KERNEL: "/logos/kernel.svg",
+  SATLAYER: "/logos/satlayer.svg",
+  BABYLON: "/logos/babylon.svg",
+  MILKYWAY: "/logos/milkyway.svg",
+  LEVEL: "/logos/level.svg",
+  INCEPTION: "/logos/inception.svg",
 };
 
 export const PARTNER_LOGOS_DARK = {
