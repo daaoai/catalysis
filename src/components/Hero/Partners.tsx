@@ -8,10 +8,7 @@ const Partners: React.FC = () => {
 
   return (
     <div className="hidden md:flex overflow-hidden mt-28 mb-12">
-      <div
-        className="flex gap-10"
-        style={{ animation: "scroll 20s linear infinite" }}
-      >
+      <div className="flex" style={{ animation: "scroll 40s linear infinite" }}>
         <img src={PartnersSrc} alt="Catalysis Partners" className="w-auto" />
         <img src={PartnersSrc} alt="Catalysis Partners" className="w-auto" />
       </div>

@@ -20,13 +20,13 @@ export const roadmapItems: RoadmapItem[] = [
     description: "Integrating Eigenlayer, Symbiotic and Kernel DAO",
   },
   {
-    quarter: "Q2’",
+    quarter: "Q3’",
     year: "25",
     title: "Testnet 2",
     description: "Integrating Babylon, Satlayer, Milkyway",
   },
   {
-    quarter: "Q2’",
+    quarter: "Q4’",
     year: "25",
     title: "Mainnet",
     description: "Catalysis Network Mainnet",

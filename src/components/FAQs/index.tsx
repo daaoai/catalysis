@@ -24,7 +24,7 @@ const FAQContentection: React.FC = () => {
             <button
               key={idx}
               onClick={() => setSelectedUser(idx)}
-              className={`px-5 py-2 rounded-full font-generalsans transition-all duration-200 text-sm  font-normal ${
+              className={`px-5 py-2 rounded-full font-generalsans transition-all duration-200 text-sm font-normal ${
                 selectedUser === idx
                   ? "dark:bg-zinc-900 dark:text-white bg-white text-[#3A3A3A]"
                   : "dark:text-faqNonSelectedDark text-black-20"
@@ -36,15 +36,15 @@ const FAQContentection: React.FC = () => {
         </div>
 
         <div className="flex flex-col gap-10">
-          {faqContent.map((faq, index: number) => (
+          {faqContent[selectedUser].map((faq, index: number) => (
             <div key={index}>
               <button
-                className="w-full text-left flex justify-between items-start  dark:text-faqQuestionDark gap-4"
+                className="w-full text-left flex justify-between items-start dark:text-faqQuestionDark gap-4"
                 onClick={() =>
                   setOpenQuestion(openQuestion === index ? null : index)
                 }
               >
-                <p className="font-generalsans text-[#3A3A3A] text-[24px] tracking-tight  font-normal">
+                <p className="font-generalsans text-[#3A3A3A] text-[24px] tracking-tight font-normal">
                   {faq.question}
                 </p>
                 <div>
